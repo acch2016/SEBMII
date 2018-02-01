@@ -1,0 +1,29 @@
+20:06:04 **** Incremental Build of configuration Debug for project 0125_LED ****
+make -r -j4 all 
+Building file: ../source/0125_LED.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\acch\0125_LED\board" -I"C:\acch\0125_LED\source" -I"C:\acch\0125_LED" -I"C:\acch\0125_LED\drivers" -I"C:\acch\0125_LED\CMSIS" -I"C:\acch\0125_LED\utilities" -I"C:\acch\0125_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/0125_LED.d" -MT"source/0125_LED.o" -MT"source/0125_LED.d" -o "source/0125_LED.o" "../source/0125_LED.c"
+Finished building: ../source/0125_LED.c
+ 
+Building target: 0125_LED.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -print-memory-usage -Xlinker --gc-sections -Xlinker -Map="0125_LED.map" -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T 0125_LED_Debug.ld -o "0125_LED.axf"  ./utilities/fsl_debug_console.o ./utilities/fsl_io.o ./utilities/fsl_log.o ./utilities/fsl_str.o  ./startup/startup_mk64f12.o  ./source/0125_LED.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_flash.o ./drivers/fsl_gpio.o ./drivers/fsl_rtc.o ./drivers/fsl_smc.o ./drivers/fsl_uart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./CMSIS/system_MK64F12.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       31156 B         1 MB      2.97%
+      SRAM_UPPER:        8600 B       192 KB      4.37%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+        FLEX_RAM:          0 GB         4 KB      0.00%
+Finished building target: 0125_LED.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "0125_LED.axf"; # arm-none-eabi-objcopy -v -O binary "0125_LED.axf" "0125_LED.bin" ; # checksum -p MK64FN1M0xxx12 -d "0125_LED.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31144	     12	   8588	  39744	   9b40	0125_LED.axf
+ 
+20:06:10 **** Incremental Build of configuration Debug for project 0125_LED ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+20:06:11 **** Incremental Build of configuration Debug for project 0125_LED ****
+make -r -j4 all 
+make: Nothing to be done for `all'.

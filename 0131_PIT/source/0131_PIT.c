@@ -39,7 +39,10 @@
 #include "clock_config.h"
 #include "MK64F12.h"
 #include "fsl_debug_console.h"
+#include "fsl_port.h"
+#include "fsl_gpio.h"
 #include "fsl_pit.h"
+
 
 /* TODO: insert other include files here. */
 
@@ -48,6 +51,7 @@
 /*
  * @brief   Application entry point.
  */
+
 int main(void) {
 
   	/* Init board hardware. */
@@ -57,9 +61,35 @@ int main(void) {
   	/* Init FSL debug console. */
     BOARD_InitDebugConsole();
 
-    CLOCK_EnableClock(kCLOCK_Pit0);
-    PIT_SetTimerPeriod(PIT, kPIT_Chnl_0, 120000000-1);
-    PIT_GetStatusFlags(base, channel)
+    /////////////////////////////////////////////////////////////////////    LED
+	CLOCK_EnableClock(kCLOCK_PortB);
+	//CLOCK_EnableClock(kCLOCK_PortA);sw
+
+	port_pin_config_t config_led =
+	{ kPORT_PullDisable, kPORT_SlowSlewRate, kPORT_PassiveFilterDisable,
+			kPORT_OpenDrainDisable, kPORT_LowDriveStrength, kPORT_MuxAsGpio,
+			kPORT_UnlockRegister, };
+
+	PORT_SetPinConfig(PORTB, 21, &config_led);
+
+	gpio_pin_config_t led_config_gpio =
+	{ kGPIO_DigitalOutput, 1 };
+
+	GPIO_PinInit(GPIOB, 21, &led_config_gpio);
+
+///////////////////////////////////////////////////////////////////////////	PIT
+
+    pit_config_t pit_config;
+    PIT_GetDefaultConfig(&pit_config);
+    //CLOCK_EnableClock(kCLOCK_Pit0);
+    //MCR
+    PIT_Init(PIT, &pit_config);
+
+    PIT_SetTimerPeriod(PIT, kPIT_Chnl_0, CLOCK_GetBusClkFreq());
+    PIT_GetStatusFlags(PIT, kPIT_Chnl_0);
+    PIT_StartTimer(PIT, kPIT_Chnl_0);
+    PIT_EnableInterrupts(PIT, kPIT_Chnl_0, kPIT_TimerInterruptEnable);
+    NVIC_EnableIRQ(PIT0_IRQn);
 
 
     /* Force the counter to be placed into memory. */
@@ -69,4 +99,12 @@ int main(void) {
         i++ ;
     }
     return 0 ;
+}
+
+void PIT0_IRQHandler(){
+
+	static uint8_t state = 0;
+	PIT_ClearStatusFlags(PIT, kPIT_Chnl_0, kPIT_TimerFlag);
+	GPIO_WritePinOutput(GPIOB,21,state);
+	state = ( 0 == state ) ? 1 : 0;
 }

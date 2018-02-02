@@ -94,7 +94,7 @@ int main(void)
 
 	uint8_t data_buffer = 0x0D;
 
-	masterXfer.slaveAddress = 0x1D;
+	masterXfer.slaveAddress = 0x1D;//from schematic
 	masterXfer.direction = kI2C_Write;
 	masterXfer.subaddress = 0;
 	masterXfer.subaddressSize = 0;
@@ -107,12 +107,12 @@ int main(void)
 	while (!g_MasterCompletionFlag){}
 	g_MasterCompletionFlag = false;
 
-	uint8_t read_data;
+	uint8_t read_data;//=1;
 
 	masterXfer.slaveAddress = 0x1D;
-	masterXfer.direction = kI2C_Read;
-	masterXfer.subaddress = 0;
-	masterXfer.subaddressSize = 0;
+	masterXfer.direction = kI2C_Read;//kI2C_Write
+	masterXfer.subaddress = 0x0D;//0x2A
+	masterXfer.subaddressSize = 1;
 	masterXfer.data = &read_data;
 	masterXfer.dataSize = 1;
 	masterXfer.flags = kI2C_TransferRepeatedStartFlag;

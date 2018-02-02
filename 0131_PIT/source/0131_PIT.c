@@ -43,7 +43,7 @@
 #include "fsl_gpio.h"
 #include "fsl_pit.h"
 
-
+uint8_t counter = 0;
 /* TODO: insert other include files here. */
 
 /* TODO: insert other definitions and declarations here. */
@@ -63,7 +63,8 @@ int main(void) {
 
     /////////////////////////////////////////////////////////////////////    LED
 	CLOCK_EnableClock(kCLOCK_PortB);
-	//CLOCK_EnableClock(kCLOCK_PortA);sw
+	CLOCK_EnableClock(kCLOCK_PortE);
+
 
 	port_pin_config_t config_led =
 	{ kPORT_PullDisable, kPORT_SlowSlewRate, kPORT_PassiveFilterDisable,
@@ -71,11 +72,18 @@ int main(void) {
 			kPORT_UnlockRegister, };
 
 	PORT_SetPinConfig(PORTB, 21, &config_led);
+	PORT_SetPinConfig(PORTB, 22, &config_led);
+	PORT_SetPinConfig(PORTE, 26, &config_led);
 
 	gpio_pin_config_t led_config_gpio =
 	{ kGPIO_DigitalOutput, 1 };
 
 	GPIO_PinInit(GPIOB, 21, &led_config_gpio);
+	GPIO_PinInit(GPIOB, 22, &led_config_gpio);
+	GPIO_PinInit(GPIOE, 26, &led_config_gpio);
+	///////////////////////////////////////////////////////////////////////////	SW
+
+//	CLOCK_EnableClock(kCLOCK_PortA);sw
 
 ///////////////////////////////////////////////////////////////////////////	PIT
 
@@ -85,7 +93,7 @@ int main(void) {
     //MCR
     PIT_Init(PIT, &pit_config);
 
-    PIT_SetTimerPeriod(PIT, kPIT_Chnl_0, CLOCK_GetBusClkFreq());
+    PIT_SetTimerPeriod(PIT, kPIT_Chnl_0, CLOCK_GetBusClkFreq()*(1.5));
     PIT_GetStatusFlags(PIT, kPIT_Chnl_0);
     PIT_StartTimer(PIT, kPIT_Chnl_0);
     PIT_EnableInterrupts(PIT, kPIT_Chnl_0, kPIT_TimerInterruptEnable);
@@ -103,8 +111,28 @@ int main(void) {
 
 void PIT0_IRQHandler(){
 
-	static uint8_t state = 0;
+
 	PIT_ClearStatusFlags(PIT, kPIT_Chnl_0, kPIT_TimerFlag);
-	GPIO_WritePinOutput(GPIOB,21,state);
-	state = ( 0 == state ) ? 1 : 0;
+
+	counter ++;
+
+	if (1==counter)
+	{
+		GPIO_WritePinOutput(GPIOB,21,1);//B
+		GPIO_WritePinOutput(GPIOB,22,0);//R
+
+	}
+	else if(2==counter)
+	{
+		GPIO_WritePinOutput(GPIOB,22,1);//R
+		GPIO_WritePinOutput(GPIOE,26,0);//G
+	}
+	else
+	{
+		GPIO_WritePinOutput(GPIOE,26,1);//G
+		GPIO_WritePinOutput(GPIOB,21,0);//B
+		counter = 0;
+	}
+
+
 }

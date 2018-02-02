@@ -43,11 +43,13 @@
 #include "fsl_gpio.h"
 #include "fsl_pit.h"
 
-uint8_t counter = 0;
+
 /* TODO: insert other include files here. */
 
 /* TODO: insert other definitions and declarations here. */
-
+uint8_t counter = 0;
+uint8_t counterSW = 1;
+//uint8_t offset(uint8_t botonazo);
 /*
  * @brief   Application entry point.
  */
@@ -61,7 +63,7 @@ int main(void) {
   	/* Init FSL debug console. */
     BOARD_InitDebugConsole();
 
-    /////////////////////////////////////////////////////////////////////    LED
+    /////////////////////////////    LED    /////////////////////
 	CLOCK_EnableClock(kCLOCK_PortB);
 	CLOCK_EnableClock(kCLOCK_PortE);
 
@@ -81,11 +83,33 @@ int main(void) {
 	GPIO_PinInit(GPIOB, 21, &led_config_gpio);
 	GPIO_PinInit(GPIOB, 22, &led_config_gpio);
 	GPIO_PinInit(GPIOE, 26, &led_config_gpio);
-	///////////////////////////////////////////////////////////////////////////	SW
 
-//	CLOCK_EnableClock(kCLOCK_PortA);sw
+	///////////////////////////////////	SW   //////////////////////////////
 
-///////////////////////////////////////////////////////////////////////////	PIT
+	CLOCK_EnableClock(kCLOCK_PortA); // PTA4 // SW3
+	CLOCK_EnableClock(kCLOCK_PortC); // PTC6 // SW2
+
+	port_pin_config_t config_switch =
+	{ kPORT_PullDisable, kPORT_SlowSlewRate,
+			kPORT_PassiveFilterDisable, kPORT_OpenDrainDisable,
+			kPORT_LowDriveStrength, kPORT_MuxAsGpio, kPORT_UnlockRegister };
+
+	PORT_SetPinInterruptConfig(PORTA, 4, kPORT_InterruptFallingEdge);
+	PORT_SetPinInterruptConfig(PORTC, 6, kPORT_InterruptFallingEdge);
+
+	PORT_SetPinConfig(PORTA, 4, &config_switch); // SW3
+	PORT_SetPinConfig(PORTC, 6, &config_switch); // SW2
+
+	gpio_pin_config_t switch_config_gpio =
+	{ kGPIO_DigitalInput, 1 };
+
+	GPIO_PinInit(GPIOA, 4, &switch_config_gpio);
+	GPIO_PinInit(GPIOC, 6, &switch_config_gpio);
+
+	NVIC_EnableIRQ(PORTA_IRQn);
+	NVIC_EnableIRQ(PORTC_IRQn);
+
+////////////////////////////////////////////	PIT     ////////////////////
 
     pit_config_t pit_config;
     PIT_GetDefaultConfig(&pit_config);
@@ -109,30 +133,100 @@ int main(void) {
     return 0 ;
 }
 
-void PIT0_IRQHandler(){
+//void directionRGB()
+//{
+//
+//
+//}
+//
+//void directionBGR()
+//{
+//
+//}
+//
+//uint8_t offset(uint8_t botonazo)
+//{
+//	if (1 == botonazo)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return -1;
+//	}
+//
+//}
 
-
+void PIT0_IRQHandler()
+{
 	PIT_ClearStatusFlags(PIT, kPIT_Chnl_0, kPIT_TimerFlag);
 
-	counter ++;
+//	counter = counter + offset(counterSW);
 
-	if (1==counter)
+		if (2 == counterSW)
+		{
+			counter --;
+		}
+		else
+		{
+			counter ++;
+		}
+
+	switch (counter)
 	{
-		GPIO_WritePinOutput(GPIOB,21,1);//B
-		GPIO_WritePinOutput(GPIOB,22,0);//R
+	case 1:
+		GPIO_WritePinOutput(GPIOB, 21, 1);    //B
+		GPIO_WritePinOutput(GPIOE, 26, 1);    //G
+		GPIO_WritePinOutput(GPIOB, 22, 0);    //R ON
+		if ((2 == counterSW) && (0 == counter))
+		{
+			counter = 3;
+		}
+		break;
+	case 2:
+		GPIO_WritePinOutput(GPIOB, 21, 1);    //B
+		GPIO_WritePinOutput(GPIOB, 22, 1);    //R
+		GPIO_WritePinOutput(GPIOE, 26, 0);    //G ON
+		break;
+	default:
+		GPIO_WritePinOutput(GPIOB, 22, 1);    //R
+		GPIO_WritePinOutput(GPIOE, 26, 1);    //G
+		GPIO_WritePinOutput(GPIOB, 21, 0);    //B ON
+		if ((1 == counterSW) && (3 == counter))
+		{
+			counter = 0;
+		}
+		else if ((2 == counterSW) && (0 == counter))
+		{
+			counter = 4;
+		}
 
 	}
-	else if(2==counter)
+
+
+}
+
+void PORTA_IRQHandler() // SW3 cambio de sentido
+{
+	PORT_ClearPinsInterruptFlags(PORTA, 1<<4);
+
+	counterSW ++;
+
+	//PIT_StartTimer(PIT, kPIT_Chnl_0);
+
+	if (3 == counterSW)
 	{
-		GPIO_WritePinOutput(GPIOB,22,1);//R
-		GPIO_WritePinOutput(GPIOE,26,0);//G
-	}
-	else
-	{
-		GPIO_WritePinOutput(GPIOE,26,1);//G
-		GPIO_WritePinOutput(GPIOB,21,0);//B
-		counter = 0;
+		counterSW = 1;
 	}
 
 
+
+//	PIT_StopTimer(PIT, kPIT_Chnl_0);
+
+}
+
+void PORTC_IRQHandler() // SW2 la secuencia pare y el led se quede estatico
+{
+	PORT_ClearPinsInterruptFlags(PORTC, 1<<4);
+	PIT_StopTimer(PIT, kPIT_Chnl_0);
 }

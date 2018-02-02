@@ -349,8 +349,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x46 ./drivers/fsl_common.o
  .debug_macro   0x00000000      0x171 ./drivers/fsl_common.o
  .debug_macro   0x00000000       0x5f ./drivers/fsl_common.o
- .debug_line    0x00000000      0x1e0 ./drivers/fsl_common.o
- .debug_str     0x00000000    0x78b05 ./drivers/fsl_common.o
+ .debug_line    0x00000000      0x1e2 ./drivers/fsl_common.o
+ .debug_str     0x00000000    0x78b07 ./drivers/fsl_common.o
  .comment       0x00000000       0x80 ./drivers/fsl_common.o
  .ARM.attributes
                 0x00000000       0x39 ./drivers/fsl_common.o
@@ -475,8 +475,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x46 ./drivers/fsl_rtc.o
  .debug_macro   0x00000000      0x171 ./drivers/fsl_rtc.o
  .debug_macro   0x00000000       0x5f ./drivers/fsl_rtc.o
- .debug_line    0x00000000      0x351 ./drivers/fsl_rtc.o
- .debug_str     0x00000000    0x7926e ./drivers/fsl_rtc.o
+ .debug_line    0x00000000      0x353 ./drivers/fsl_rtc.o
+ .debug_str     0x00000000    0x79270 ./drivers/fsl_rtc.o
  .comment       0x00000000       0x80 ./drivers/fsl_rtc.o
  .debug_frame   0x00000000      0x278 ./drivers/fsl_rtc.o
  .ARM.attributes
@@ -1688,60 +1688,60 @@ OUTPUT(0125_LED.axf elf32-littlearm)
  .debug_macro   0x00012b88      0x105 ./board/pin_mux.o
  .debug_macro   0x00012c8d       0x98 ./CMSIS/system_MK64F12.o
 
-.debug_line     0x00000000     0x33fc
- .debug_line    0x00000000      0x2cf ./utilities/fsl_debug_console.o
- .debug_line    0x000002cf      0x2a2 ./utilities/fsl_io.o
- .debug_line    0x00000571      0x2a8 ./utilities/fsl_log.o
- .debug_line    0x00000819      0x508 ./utilities/fsl_str.o
- .debug_line    0x00000d21      0x183 ./startup/startup_mk64f12.o
- .debug_line    0x00000ea4      0x2fe ./source/0125_LED.o
- .debug_line    0x000011a2       0x54 ./source/semihost_hardfault.o
- .debug_line    0x000011f6      0x634 ./drivers/fsl_clock.o
- .debug_line    0x0000182a      0x5cc ./drivers/fsl_flash.o
- .debug_line    0x00001df6      0x23c ./drivers/fsl_gpio.o
- .debug_line    0x00002032      0x350 ./drivers/fsl_smc.o
- .debug_line    0x00002382      0x72b ./drivers/fsl_uart.o
- .debug_line    0x00002aad      0x261 ./board/board.o
- .debug_line    0x00002d0e      0x26a ./board/clock_config.o
- .debug_line    0x00002f78       0x58 ./board/peripherals.o
- .debug_line    0x00002fd0      0x23c ./board/pin_mux.o
- .debug_line    0x0000320c      0x1f0 ./CMSIS/system_MK64F12.o
+.debug_line     0x00000000     0x342c
+ .debug_line    0x00000000      0x2d3 ./utilities/fsl_debug_console.o
+ .debug_line    0x000002d3      0x2a6 ./utilities/fsl_io.o
+ .debug_line    0x00000579      0x2ac ./utilities/fsl_log.o
+ .debug_line    0x00000825      0x50c ./utilities/fsl_str.o
+ .debug_line    0x00000d31      0x183 ./startup/startup_mk64f12.o
+ .debug_line    0x00000eb4      0x306 ./source/0125_LED.o
+ .debug_line    0x000011ba       0x54 ./source/semihost_hardfault.o
+ .debug_line    0x0000120e      0x636 ./drivers/fsl_clock.o
+ .debug_line    0x00001844      0x5ce ./drivers/fsl_flash.o
+ .debug_line    0x00001e12      0x23e ./drivers/fsl_gpio.o
+ .debug_line    0x00002050      0x352 ./drivers/fsl_smc.o
+ .debug_line    0x000023a2      0x72d ./drivers/fsl_uart.o
+ .debug_line    0x00002acf      0x267 ./board/board.o
+ .debug_line    0x00002d36      0x26e ./board/clock_config.o
+ .debug_line    0x00002fa4       0x58 ./board/peripherals.o
+ .debug_line    0x00002ffc      0x240 ./board/pin_mux.o
+ .debug_line    0x0000323c      0x1f0 ./CMSIS/system_MK64F12.o
 
-.debug_str      0x00000000    0x81ba1
- .debug_str     0x00000000    0x78ea3 ./utilities/fsl_debug_console.o
-                              0x78f90 (size before relaxing)
- .debug_str     0x00078ea3      0xa2a ./utilities/fsl_io.o
-                              0x79742 (size before relaxing)
- .debug_str     0x000798cd      0x1d8 ./utilities/fsl_log.o
-                              0x78f20 (size before relaxing)
- .debug_str     0x00079aa5      0x68d ./utilities/fsl_str.o
-                              0x79423 (size before relaxing)
- .debug_str     0x0007a132      0x80f ./startup/startup_mk64f12.o
-                               0x2e68 (size before relaxing)
- .debug_str     0x0007a941     0x1c26 ./source/0125_LED.o
-                              0x7a878 (size before relaxing)
- .debug_str     0x0007c567       0x1f ./source/semihost_hardfault.o
-                               0x25f0 (size before relaxing)
- .debug_str     0x0007c586     0x1782 ./drivers/fsl_clock.o
-                              0x7ae85 (size before relaxing)
- .debug_str     0x0007dd08     0x2bdc ./drivers/fsl_flash.o
-                              0x7bdbf (size before relaxing)
- .debug_str     0x000808e4       0x96 ./drivers/fsl_gpio.o
-                              0x79239 (size before relaxing)
- .debug_str     0x0008097a      0x405 ./drivers/fsl_smc.o
-                              0x797f4 (size before relaxing)
- .debug_str     0x00080d7f      0x9e0 ./drivers/fsl_uart.o
-                              0x7a776 (size before relaxing)
- .debug_str     0x0008175f       0x37 ./board/board.o
-                              0x79af3 (size before relaxing)
- .debug_str     0x00081796      0x2a3 ./board/clock_config.o
-                              0x798ec (size before relaxing)
- .debug_str     0x00081a39       0x31 ./board/peripherals.o
-                               0x2601 (size before relaxing)
- .debug_str     0x00081a6a       0x8a ./board/pin_mux.o
-                              0x79067 (size before relaxing)
- .debug_str     0x00081af4       0xad ./CMSIS/system_MK64F12.o
-                              0x77e84 (size before relaxing)
+.debug_str      0x00000000    0x81ba3
+ .debug_str     0x00000000    0x78ea5 ./utilities/fsl_debug_console.o
+                              0x78f92 (size before relaxing)
+ .debug_str     0x00078ea5      0xa2a ./utilities/fsl_io.o
+                              0x79744 (size before relaxing)
+ .debug_str     0x000798cf      0x1d8 ./utilities/fsl_log.o
+                              0x78f22 (size before relaxing)
+ .debug_str     0x00079aa7      0x68d ./utilities/fsl_str.o
+                              0x79425 (size before relaxing)
+ .debug_str     0x0007a134      0x80f ./startup/startup_mk64f12.o
+                               0x2e6a (size before relaxing)
+ .debug_str     0x0007a943     0x1c26 ./source/0125_LED.o
+                              0x7a87a (size before relaxing)
+ .debug_str     0x0007c569       0x1f ./source/semihost_hardfault.o
+                               0x25f2 (size before relaxing)
+ .debug_str     0x0007c588     0x1782 ./drivers/fsl_clock.o
+                              0x7ae87 (size before relaxing)
+ .debug_str     0x0007dd0a     0x2bdc ./drivers/fsl_flash.o
+                              0x7bdc1 (size before relaxing)
+ .debug_str     0x000808e6       0x96 ./drivers/fsl_gpio.o
+                              0x7923b (size before relaxing)
+ .debug_str     0x0008097c      0x405 ./drivers/fsl_smc.o
+                              0x797f6 (size before relaxing)
+ .debug_str     0x00080d81      0x9e0 ./drivers/fsl_uart.o
+                              0x7a778 (size before relaxing)
+ .debug_str     0x00081761       0x37 ./board/board.o
+                              0x79af5 (size before relaxing)
+ .debug_str     0x00081798      0x2a3 ./board/clock_config.o
+                              0x798ee (size before relaxing)
+ .debug_str     0x00081a3b       0x31 ./board/peripherals.o
+                               0x2603 (size before relaxing)
+ .debug_str     0x00081a6c       0x8a ./board/pin_mux.o
+                              0x79069 (size before relaxing)
+ .debug_str     0x00081af6       0xad ./CMSIS/system_MK64F12.o
+                              0x77e86 (size before relaxing)
 
 .comment        0x00000000       0x7f
  .comment       0x00000000       0x7f ./utilities/fsl_debug_console.o

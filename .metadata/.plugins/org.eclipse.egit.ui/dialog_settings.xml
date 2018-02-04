@@ -6,6 +6,8 @@
 	<list key="CommitDialog.committerValues">
 		<item value="acch2016 &lt;ie696846@iteso.mx&gt;"/>
 	</list>
+	<section name="GitImportWizard">
+	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
 		<item value="666" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>

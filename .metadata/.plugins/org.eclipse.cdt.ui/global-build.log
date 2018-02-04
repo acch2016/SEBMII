@@ -1,110 +1,15 @@
-23:31:08 **** Clean-only build of configuration Debug for project 0131_PIT_LED ****
-make -r -j4 clean 
-rm -rf  ./utilities/fsl_debug_console.o ./utilities/fsl_io.o ./utilities/fsl_log.o ./utilities/fsl_str.o  ./startup/startup_mk64f12.o  ./source/0131_PIT_LED.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_flash.o ./drivers/fsl_gpio.o ./drivers/fsl_pit.o ./drivers/fsl_smc.o ./drivers/fsl_uart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./CMSIS/system_MK64F12.o  ./utilities/fsl_debug_console.d ./utilities/fsl_io.d ./utilities/fsl_log.d ./utilities/fsl_str.d  ./startup/startup_mk64f12.d  ./source/0131_PIT_LED.d ./source/semihost_hardfault.d  ./drivers/fsl_clock.d ./drivers/fsl_common.d ./drivers/fsl_flash.d ./drivers/fsl_gpio.d ./drivers/fsl_pit.d ./drivers/fsl_smc.d ./drivers/fsl_uart.d  ./board/board.d ./board/clock_config.d ./board/peripherals.d ./board/pin_mux.d  ./CMSIS/system_MK64F12.d  0131_PIT_LED.axf
- 
-23:31:09 **** Build of configuration Debug for project 0131_PIT_LED ****
+00:55:45 **** Incremental Build of configuration Debug for project 0131_PIT_LED ****
 make -r -j4 all 
-Building file: ../utilities/fsl_debug_console.c
-Building file: ../utilities/fsl_io.c
-Building file: ../utilities/fsl_log.c
-Building file: ../utilities/fsl_str.c
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"utilities/fsl_debug_console.d" -MT"utilities/fsl_debug_console.o" -MT"utilities/fsl_debug_console.d" -o "utilities/fsl_debug_console.o" "../utilities/fsl_debug_console.c"
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"utilities/fsl_log.d" -MT"utilities/fsl_log.o" -MT"utilities/fsl_log.d" -o "utilities/fsl_log.o" "../utilities/fsl_log.c"
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"utilities/fsl_io.d" -MT"utilities/fsl_io.o" -MT"utilities/fsl_io.d" -o "utilities/fsl_io.o" "../utilities/fsl_io.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"utilities/fsl_str.d" -MT"utilities/fsl_str.o" -MT"utilities/fsl_str.d" -o "utilities/fsl_str.o" "../utilities/fsl_str.c"
-Finished building: ../utilities/fsl_debug_console.c
-Finished building: ../utilities/fsl_io.c
- 
- 
-Finished building: ../utilities/fsl_log.c
-Building file: ../startup/startup_mk64f12.c
 Building file: ../source/0131_PIT_LED.c
- 
-Finished building: ../utilities/fsl_str.c
 Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-Building file: ../source/semihost_hardfault.c
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/startup_mk64f12.d" -MT"startup/startup_mk64f12.o" -MT"startup/startup_mk64f12.d" -o "startup/startup_mk64f12.o" "../startup/startup_mk64f12.c"
 arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/0131_PIT_LED.d" -MT"source/0131_PIT_LED.o" -MT"source/0131_PIT_LED.d" -o "source/0131_PIT_LED.o" "../source/0131_PIT_LED.c"
- 
-Invoking: MCU C Compiler
-Building file: ../drivers/fsl_clock.c
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
-Finished building: ../source/semihost_hardfault.c
- 
-Finished building: ../startup/startup_mk64f12.c
-Building file: ../drivers/fsl_common.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common.d" -MT"drivers/fsl_common.o" -MT"drivers/fsl_common.d" -o "drivers/fsl_common.o" "../drivers/fsl_common.c"
-Building file: ../drivers/fsl_flash.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"drivers/fsl_flash.d" -MT"drivers/fsl_flash.o" -MT"drivers/fsl_flash.d" -o "drivers/fsl_flash.o" "../drivers/fsl_flash.c"
-Finished building: ../drivers/fsl_clock.c
- 
 Finished building: ../source/0131_PIT_LED.c
- 
-Building file: ../drivers/fsl_gpio.c
-Building file: ../drivers/fsl_pit.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"drivers/fsl_gpio.d" -MT"drivers/fsl_gpio.o" -MT"drivers/fsl_gpio.d" -o "drivers/fsl_gpio.o" "../drivers/fsl_gpio.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"drivers/fsl_pit.d" -MT"drivers/fsl_pit.o" -MT"drivers/fsl_pit.d" -o "drivers/fsl_pit.o" "../drivers/fsl_pit.c"
-Finished building: ../drivers/fsl_common.c
- 
-Finished building: ../drivers/fsl_gpio.c
-Building file: ../drivers/fsl_smc.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"drivers/fsl_smc.d" -MT"drivers/fsl_smc.o" -MT"drivers/fsl_smc.d" -o "drivers/fsl_smc.o" "../drivers/fsl_smc.c"
-Building file: ../drivers/fsl_uart.c
-Finished building: ../drivers/fsl_pit.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"drivers/fsl_uart.d" -MT"drivers/fsl_uart.o" -MT"drivers/fsl_uart.d" -o "drivers/fsl_uart.o" "../drivers/fsl_uart.c"
- 
-Building file: ../board/board.c
-Finished building: ../drivers/fsl_flash.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
- 
-Building file: ../board/clock_config.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
-Finished building: ../board/clock_config.c
- 
-Finished building: ../drivers/fsl_uart.c
-Building file: ../board/peripherals.c
- 
-Finished building: ../drivers/fsl_smc.c
-make: stat: CMSIS/system_MK64F12.o: Bad file number
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
-Building file: ../board/pin_mux.c
- 
-Finished building: ../board/board.c
-Invoking: MCU C Compiler
-Building file: ../CMSIS/system_MK64F12.c
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_BAREMETAL -DFSL_RTOS_BM -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBMII\0131_PIT_LED\board" -I"C:\SEBMII\0131_PIT_LED\source" -I"C:\SEBMII\0131_PIT_LED" -I"C:\SEBMII\0131_PIT_LED\drivers" -I"C:\SEBMII\0131_PIT_LED\CMSIS" -I"C:\SEBMII\0131_PIT_LED\utilities" -I"C:\SEBMII\0131_PIT_LED\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"CMSIS/system_MK64F12.d" -MT"CMSIS/system_MK64F12.o" -MT"CMSIS/system_MK64F12.d" -o "CMSIS/system_MK64F12.o" "../CMSIS/system_MK64F12.c"
-Finished building: ../board/peripherals.c
- 
-Finished building: ../CMSIS/system_MK64F12.c
- 
-Finished building: ../board/pin_mux.c
  
 Building target: 0131_PIT_LED.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -Xlinker -print-memory-usage -Xlinker --gc-sections -Xlinker -Map="0131_PIT_LED.map" -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T 0131_PIT_LED_Debug.ld -o "0131_PIT_LED.axf"  ./utilities/fsl_debug_console.o ./utilities/fsl_io.o ./utilities/fsl_log.o ./utilities/fsl_str.o  ./startup/startup_mk64f12.o  ./source/0131_PIT_LED.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_flash.o ./drivers/fsl_gpio.o ./drivers/fsl_pit.o ./drivers/fsl_smc.o ./drivers/fsl_uart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./CMSIS/system_MK64F12.o   
 Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       32876 B         1 MB      3.14%
+   PROGRAM_FLASH:       32880 B         1 MB      3.14%
       SRAM_UPPER:        8604 B       192 KB      4.38%
       SRAM_LOWER:          0 GB        64 KB      0.00%
         FLEX_RAM:          0 GB         4 KB      0.00%
@@ -114,11 +19,11 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "0131_PIT_LED.axf"; # arm-none-eabi-objcopy -v -O binary "0131_PIT_LED.axf" "0131_PIT_LED.bin" ; # checksum -p MK64FN1M0xxx12 -d "0131_PIT_LED.bin";
    text	   data	    bss	    dec	    hex	filename
-  32860	     16	   8588	  41464	   a1f8	0131_PIT_LED.axf
+  32864	     16	   8588	  41468	   a1fc	0131_PIT_LED.axf
  
-23:31:33 **** Incremental Build of configuration Debug for project 0131_PIT_LED ****
+00:55:58 **** Incremental Build of configuration Debug for project 0131_PIT_LED ****
 make -r -j4 all 
 make: Nothing to be done for `all'.
-23:31:35 **** Incremental Build of configuration Debug for project 0131_PIT_LED ****
+00:56:00 **** Incremental Build of configuration Debug for project 0131_PIT_LED ****
 make -r -j4 all 
 make: Nothing to be done for `all'.

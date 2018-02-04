@@ -48,9 +48,8 @@
 
 /* TODO: insert other definitions and declarations here. */
 uint8_t counter = 0;
-uint8_t counterSW2 = 1;
-uint8_t counterSW3 = 1;
-
+uint8_t counterSW = 1;
+//uint8_t offset(uint8_t botonazo);
 /*
  * @brief   Application entry point.
  */
@@ -65,9 +64,9 @@ int main(void) {
     BOARD_InitDebugConsole();
 
     /////////////////////////////    LED    /////////////////////
-
 	CLOCK_EnableClock(kCLOCK_PortB);
 	CLOCK_EnableClock(kCLOCK_PortE);
+
 
 	port_pin_config_t config_led =
 	{ kPORT_PullDisable, kPORT_SlowSlewRate, kPORT_PassiveFilterDisable,
@@ -117,6 +116,7 @@ int main(void) {
     //CLOCK_EnableClock(kCLOCK_Pit0);
     //MCR
     PIT_Init(PIT, &pit_config);
+
     PIT_SetTimerPeriod(PIT, kPIT_Chnl_0, CLOCK_GetBusClkFreq()*(1.5));
     PIT_GetStatusFlags(PIT, kPIT_Chnl_0);
     PIT_StartTimer(PIT, kPIT_Chnl_0);
@@ -133,25 +133,43 @@ int main(void) {
     return 0 ;
 }
 
+//void directionRGB()
+//{
+//
+//
+//}
+//
+//void directionBGR()
+//{
+//
+//}
+//
+//uint8_t offset(uint8_t botonazo)
+//{
+//	if (1 == botonazo)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return -1;
+//	}
+//
+//}
+
 void PIT0_IRQHandler()
 {
 	PIT_ClearStatusFlags(PIT, kPIT_Chnl_0, kPIT_TimerFlag);
 
-		if (2 == counterSW3)
+//	counter = counter + offset(counterSW);
+
+		if (2 == counterSW)
 		{
 			counter --;
-			if (0 == counter)
-			{
-				counter = 3;
-			}
 		}
 		else
 		{
 			counter ++;
-			if (4 == counter)
-			{
-				counter = 1;
-			}
 		}
 
 	switch (counter)
@@ -160,6 +178,10 @@ void PIT0_IRQHandler()
 		GPIO_WritePinOutput(GPIOB, 21, 1);    //B
 		GPIO_WritePinOutput(GPIOE, 26, 1);    //G
 		GPIO_WritePinOutput(GPIOB, 22, 0);    //R ON
+		if ((2 == counterSW) && (0 == counter))
+		{
+			counter = 3;
+		}
 		break;
 	case 2:
 		GPIO_WritePinOutput(GPIOB, 21, 1);    //B
@@ -170,6 +192,15 @@ void PIT0_IRQHandler()
 		GPIO_WritePinOutput(GPIOB, 22, 1);    //R
 		GPIO_WritePinOutput(GPIOE, 26, 1);    //G
 		GPIO_WritePinOutput(GPIOB, 21, 0);    //B ON
+		if ((1 == counterSW) && (3 == counter))
+		{
+			counter = 0;
+		}
+		else if ((2 == counterSW) && (0 == counter))
+		{
+			counter = 4;
+		}
+
 	}
 
 
@@ -179,31 +210,23 @@ void PORTA_IRQHandler() // SW3 cambio de sentido
 {
 	PORT_ClearPinsInterruptFlags(PORTA, 1<<4);
 
-	counterSW3 ++;
+	counterSW ++;
 
-	if (3 == counterSW3)
+	//PIT_StartTimer(PIT, kPIT_Chnl_0);
+
+	if (3 == counterSW)
 	{
-		counterSW3 = 1;
+		counterSW = 1;
 	}
+
+
+
+//	PIT_StopTimer(PIT, kPIT_Chnl_0);
 
 }
 
 void PORTC_IRQHandler() // SW2 la secuencia pare y el led se quede estatico
 {
-	PORT_ClearPinsInterruptFlags(PORTC, 1<<6);
-
-	counterSW2 ++;
-
-	if (3 == counterSW2)
-	{
-		counterSW2 = 1;
-	}
-	if (2 == counterSW2)
-	{
-		PIT_StopTimer(PIT, kPIT_Chnl_0);
-	}
-	else
-	{
-		PIT_StartTimer(PIT, kPIT_Chnl_0);
-	}
+	PORT_ClearPinsInterruptFlags(PORTC, 1<<4);
+	PIT_StopTimer(PIT, kPIT_Chnl_0);
 }

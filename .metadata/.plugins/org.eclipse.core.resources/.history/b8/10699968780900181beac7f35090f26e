@@ -50,7 +50,7 @@
 uint8_t counter = 0;
 uint8_t counterSW2 = 1;
 uint8_t counterSW3 = 1;
-
+//uint8_t offset(uint8_t botonazo);
 /*
  * @brief   Application entry point.
  */

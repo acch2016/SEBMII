@@ -1,0 +1,6 @@
+23:31:35 **** Incremental Build of configuration Debug for project 0131_PIT_LED ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+
+23:31:36 Build Finished (took 161ms)
+

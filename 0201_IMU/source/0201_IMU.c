@@ -29,6 +29,11 @@
  */
  
 /**
+ * @file    0201_IMU.c
+ * @brief   Application entry point.
+ */
+
+/**
  * @file    imu_read.c
  * @brief   Application entry point.
  */
@@ -162,6 +167,8 @@ int main(void)
 		accelerometer[0] = buffer[0]<<8 | buffer[1];
 		accelerometer[1] = buffer[2]<<8 | buffer[3];
 		accelerometer[2] = buffer[4]<<8 | buffer[5];
+
+//		new2 = (accelerometer[2]*(0.000244))/4;
 	}
 	return 0;
 }

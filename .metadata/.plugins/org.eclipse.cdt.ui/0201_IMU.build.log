@@ -1,0 +1,6 @@
+17:08:15 **** Incremental Build of configuration Debug for project 0201_IMU ****
+make -r -j8 all 
+make: Nothing to be done for `all'.
+
+17:08:15 Build Finished (took 78ms)
+

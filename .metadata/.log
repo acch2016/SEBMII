@@ -1498,3 +1498,76 @@ Caused by: java.lang.IllegalArgumentException: Attempted to beginRule: R/, does 
 	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:638)
 	at org.eclipse.cdt.internal.core.settings.model.AbstractCProjectDescriptionStorage.setProjectDescription(AbstractCProjectDescriptionStorage.java:203)
 	... 21 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2018-02-07 21:53:12.963
+!MESSAGE An internal error occurred during: "Merging with refs/remotes/origin/master".
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of merge command. java.io.IOException: Could not rename file C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\._0201_IMU.1518044826293.pdom2108862890330954193.tmp to C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\0201_IMU.1518044826293.pdom
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:423)
+	at org.eclipse.egit.core.op.MergeOperation$1.run(MergeOperation.java:187)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.egit.core.op.MergeOperation.execute(MergeOperation.java:216)
+	at org.eclipse.egit.ui.internal.actions.MergeActionHandler$1.runInWorkspace(MergeActionHandler.java:75)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: Could not rename file C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\._0201_IMU.1518044826293.pdom2108862890330954193.tmp to C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\0201_IMU.1518044826293.pdom
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1354)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1237)
+	at org.eclipse.jgit.merge.ResolveMerger.cleanUp(ResolveMerger.java:357)
+	at org.eclipse.jgit.merge.ResolveMerger.mergeTreeWalk(ResolveMerger.java:1077)
+	at org.eclipse.jgit.merge.ResolveMerger.mergeTrees(ResolveMerger.java:1020)
+	at org.eclipse.jgit.merge.ResolveMerger.mergeImpl(ResolveMerger.java:304)
+	at org.eclipse.jgit.merge.Merger.merge(Merger.java:212)
+	at org.eclipse.jgit.merge.Merger.merge(Merger.java:165)
+	at org.eclipse.jgit.merge.ThreeWayMerger.merge(ThreeWayMerger.java:114)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:348)
+	... 7 more
+Caused by: java.io.IOException: Could not rename file C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\._0201_IMU.1518044826293.pdom2108862890330954193.tmp to C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\0201_IMU.1518044826293.pdom
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:286)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1351)
+	... 16 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-02-07 21:53:12.965
+!MESSAGE An internal error occurred during: "Merging with refs/remotes/origin/master".
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of merge command. java.io.IOException: Could not rename file C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\._0201_IMU.1518044826293.pdom2108862890330954193.tmp to C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\0201_IMU.1518044826293.pdom
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:423)
+	at org.eclipse.egit.core.op.MergeOperation$1.run(MergeOperation.java:187)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.egit.core.op.MergeOperation.execute(MergeOperation.java:216)
+	at org.eclipse.egit.ui.internal.actions.MergeActionHandler$1.runInWorkspace(MergeActionHandler.java:75)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.io.IOException: Could not rename file C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\._0201_IMU.1518044826293.pdom2108862890330954193.tmp to C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\0201_IMU.1518044826293.pdom
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1354)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1237)
+	at org.eclipse.jgit.merge.ResolveMerger.cleanUp(ResolveMerger.java:357)
+	at org.eclipse.jgit.merge.ResolveMerger.mergeTreeWalk(ResolveMerger.java:1077)
+	at org.eclipse.jgit.merge.ResolveMerger.mergeTrees(ResolveMerger.java:1020)
+	at org.eclipse.jgit.merge.ResolveMerger.mergeImpl(ResolveMerger.java:304)
+	at org.eclipse.jgit.merge.Merger.merge(Merger.java:212)
+	at org.eclipse.jgit.merge.Merger.merge(Merger.java:165)
+	at org.eclipse.jgit.merge.ThreeWayMerger.merge(ThreeWayMerger.java:114)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:348)
+	... 7 more
+Caused by: java.io.IOException: Could not rename file C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\._0201_IMU.1518044826293.pdom2108862890330954193.tmp to C:\SEBMII\.metadata\.plugins\org.eclipse.cdt.core\0201_IMU.1518044826293.pdom
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:286)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1351)
+	... 16 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2018-02-07 21:53:38.011
+!MESSAGE Cannot pull into a repository with state: MERGING_RESOLVED
+!STACK 0
+org.eclipse.jgit.api.errors.WrongRepositoryStateException: Cannot pull into a repository with state: MERGING_RESOLVED
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:225)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:200)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:232)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:176)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.access$0(PullOperationUI.java:168)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.runInWorkspace(PullOperationUI.java:141)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

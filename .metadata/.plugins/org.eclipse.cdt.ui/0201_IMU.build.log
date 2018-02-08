@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 21:25:53 **** Build of configuration Debug for project 0201_IMU ****
 make -r -j4 all 
 Building file: ../utilities/fsl_debug_console.c
@@ -134,4 +135,11 @@ arm-none-eabi-size "0201_IMU.axf"; # arm-none-eabi-objcopy -v -O binary "0201_IM
  
 
 21:26:05 Build Finished (took 11s.782ms)
+=======
+17:08:15 **** Incremental Build of configuration Debug for project 0201_IMU ****
+make -r -j8 all 
+make: Nothing to be done for `all'.
+
+17:08:15 Build Finished (took 78ms)
+>>>>>>> refs/remotes/origin/master
 

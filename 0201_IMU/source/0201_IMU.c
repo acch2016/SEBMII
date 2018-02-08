@@ -29,6 +29,11 @@
  */
  
 /**
+ * @file    0201_IMU.c
+ * @brief   Application entry point.
+ */
+
+/**
  * @file    imu_read.c
  * @brief   Application entry point.
  */
@@ -44,7 +49,7 @@
 /* TODO: insert other include files here. */
 
 /* TODO: insert other definitions and declarations here. */
-
+float new0 = 0, new1 = 0, new2 = 2;
 volatile bool g_MasterCompletionFlag = false;
 
 static void i2c_master_callback(I2C_Type *base, i2c_master_handle_t *handle,
@@ -162,6 +167,10 @@ int main(void)
 		accelerometer[0] = buffer[0]<<8 | buffer[1];
 		accelerometer[1] = buffer[2]<<8 | buffer[3];
 		accelerometer[2] = buffer[4]<<8 | buffer[5];
+
+		new0 = (accelerometer[2]*(0.000244))/4;
+		new1 = (accelerometer[2]*(0.000244))/4;
+		new2 = (accelerometer[2]*(0.000244))/4;
 	}
 	return 0;
 }

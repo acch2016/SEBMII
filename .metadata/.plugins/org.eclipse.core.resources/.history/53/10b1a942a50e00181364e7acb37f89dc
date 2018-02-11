@@ -217,11 +217,9 @@ int main(void) {
 		accelerometer[1] = buffer[2] << 8 | buffer[3];
 		accelerometer[2] = buffer[4] << 8 | buffer[5];
 
-		new0 = (accelerometer[0] * (0.000244)) / 4;
-		new1 = (accelerometer[1] * (0.000244)) / 4;
+		new0 = (accelerometer[2] * (0.000244)) / 4;
+		new1 = (accelerometer[2] * (0.000244)) / 4;
 		new2 = (accelerometer[2] * (0.000244)) / 4;
-
-
 	}
 	return 0;
 }

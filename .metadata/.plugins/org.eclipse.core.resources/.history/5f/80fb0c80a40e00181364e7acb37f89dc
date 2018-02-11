@@ -29,6 +29,11 @@
  */
  
 /**
+ * @file    0201_IMU.c
+ * @brief   Application entry point.
+ */
+
+/**
  * @file    imu_read.c
  * @brief   Application entry point.
  */
@@ -44,7 +49,7 @@
 /* TODO: insert other include files here. */
 
 /* TODO: insert other definitions and declarations here. */
-
+float new0 = 0, new1 = 0, new2 = 2;
 volatile bool g_MasterCompletionFlag = false;
 
 static void i2c_master_callback(I2C_Type *base, i2c_master_handle_t *handle,
@@ -92,9 +97,11 @@ int main(void)
 
 	i2c_master_transfer_t masterXfer;
 
-	uint8_t data_buffer = 0x0D;
 
-	masterXfer.slaveAddress = 0x1D;//from schematic
+	uint8_t data_buffer = 0x01;
+
+#if 0
+	masterXfer.slaveAddress = 0x1D;
 	masterXfer.direction = kI2C_Write;
 	masterXfer.subaddress = 0;
 	masterXfer.subaddressSize = 0;
@@ -121,14 +128,49 @@ int main(void)
 	        &masterXfer);
 	while (!g_MasterCompletionFlag){}
 	g_MasterCompletionFlag = false;
+#else
 
+	masterXfer.slaveAddress = 0x1D;
+	masterXfer.direction = kI2C_Write;
+	masterXfer.subaddress = 0x2A;
+	masterXfer.subaddressSize = 1;
+	masterXfer.data = &data_buffer;
+	masterXfer.dataSize = 1;
+	masterXfer.flags = kI2C_TransferDefaultFlag;
+
+	I2C_MasterTransferNonBlocking(I2C0,  &g_m_handle,
+	        &masterXfer);
+	while (!g_MasterCompletionFlag){}
+	g_MasterCompletionFlag = false;
+
+#endif
 	/* Force the counter to be placed into memory. */
 	volatile static int i = 0;
-
+	uint8_t buffer[6];
+	int16_t accelerometer[3];
 	/* Enter an infinite loop, just incrementing a counter. */
 	while (1)
 	{
-		i++;
+		masterXfer.slaveAddress = 0x1D;
+		masterXfer.direction = kI2C_Read;
+		masterXfer.subaddress = 0x01;
+		masterXfer.subaddressSize = 1;
+		masterXfer.data = buffer;
+		masterXfer.dataSize = 6;
+		masterXfer.flags = kI2C_TransferDefaultFlag;
+
+		I2C_MasterTransferNonBlocking(I2C0,  &g_m_handle,
+				&masterXfer);
+		while (!g_MasterCompletionFlag){}
+		g_MasterCompletionFlag = false;
+
+		accelerometer[0] = buffer[0]<<8 | buffer[1];
+		accelerometer[1] = buffer[2]<<8 | buffer[3];
+		accelerometer[2] = buffer[4]<<8 | buffer[5];
+
+		new0 = (accelerometer[2]*(0.000244))/4;
+		new1 = (accelerometer[2]*(0.000244))/4;
+		new2 = (accelerometer[2]*(0.000244))/4;
 	}
 	return 0;
 }

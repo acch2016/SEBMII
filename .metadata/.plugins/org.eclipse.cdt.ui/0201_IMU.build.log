@@ -1,6 +1,7 @@
-14:59:25 **** Incremental Build of configuration Debug for project 0201_IMU ****
-make -r -j4 all 
-make: Nothing to be done for `all'.
+20:33:17 **** Clean-only build of configuration Debug for project 0201_IMU ****
+make -r -j4 clean 
+rm -rf  ./utilities/fsl_debug_console.o ./utilities/fsl_io.o ./utilities/fsl_log.o ./utilities/fsl_str.o  ./startup/startup_mk64f12.o  ./source/0201_IMU.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_flash.o ./drivers/fsl_ftm.o ./drivers/fsl_gpio.o ./drivers/fsl_i2c.o ./drivers/fsl_pit.o ./drivers/fsl_rtc.o ./drivers/fsl_smc.o ./drivers/fsl_uart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./CMSIS/system_MK64F12.o  ./utilities/fsl_debug_console.d ./utilities/fsl_io.d ./utilities/fsl_log.d ./utilities/fsl_str.d  ./startup/startup_mk64f12.d  ./source/0201_IMU.d ./source/semihost_hardfault.d  ./drivers/fsl_clock.d ./drivers/fsl_common.d ./drivers/fsl_flash.d ./drivers/fsl_ftm.d ./drivers/fsl_gpio.d ./drivers/fsl_i2c.d ./drivers/fsl_pit.d ./drivers/fsl_rtc.d ./drivers/fsl_smc.d ./drivers/fsl_uart.d  ./board/board.d ./board/clock_config.d ./board/peripherals.d ./board/pin_mux.d  ./CMSIS/system_MK64F12.d  0201_IMU.axf
+ 
 
-14:59:25 Build Finished (took 176ms)
+20:33:18 Build Finished (took 219ms)
 

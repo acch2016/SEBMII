@@ -2,6 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
+	<section name="PDOMSearchPage">
+		<item value="true" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="PRINTF"/>
+			<item value="printf"/>
+		</list>
+	</section>
 	<section name="RenameInformationPopup">
 	</section>
 	<section name="CRenameRefactoringInputPage">

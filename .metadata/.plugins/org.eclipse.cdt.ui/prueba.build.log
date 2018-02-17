@@ -1,0 +1,6 @@
+14:59:34 **** Incremental Build of configuration Debug for project prueba ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+
+14:59:35 Build Finished (took 219ms)
+

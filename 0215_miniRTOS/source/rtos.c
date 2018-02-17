@@ -154,9 +154,9 @@ void rtos_suspend_task(void)
 	dispatcher(kFromNormalExec);
 }
 
-void rtos_activate_task(rtos_task_handle_t task)//Vacio??
+void rtos_activate_task(rtos_task_handle_t task)
 {
-	task_list.tasks[task_list.current_task].state = S_READY;
+	task_list.tasks[task].state = S_READY;
 	dispatcher(kFromNormalExec);
 }
 
@@ -187,22 +187,30 @@ static void dispatcher(task_switch_type_e type)
 	if(task_list.current_task != next_task)
 	{
 		task_list.next_task = next_task;
-		context_switch(type);
+ 		context_switch(type);
 	}
 
 }
 
 FORCE_INLINE static void context_switch(task_switch_type_e type)
-{
-	if(!flag_first_context_switch){
-	register uint32_t sp asm("sp");
-	task_list.tasks[task_list.current_task].sp = sp-9;
+ {
+	static uint8_t first = 1;
+
+	register uint32_t *sp asm("sp");
+	if (!first)
+	{
+		if (type) {
+			task_list.tasks[task_list.current_task].sp = sp - 9;
+		} else if (kFromISR == type) {
+			task_list.tasks[task_list.current_task].sp = sp + 9;
+		}
+	} else
+	{
+		first = 0;
 	}
 	task_list.current_task = task_list.next_task;
 	task_list.tasks[task_list.current_task].state = S_RUNNING;
-	SCB->ICSR |= SCB_ICSR_PENDSVCLR_Msk;
-	flag_first_context_switch = TRUE;
-
+	SCB->ICSR |= SCB_ICSR_PENDSVSET_Msk;
 }
 
 static void activate_waiting_tasks()
@@ -242,10 +250,12 @@ void SysTick_Handler(void) //Donde se incrementa????
 	refresh_is_alive();
 #endif
 	task_list.global_tick++;
-	dispatcher(kFromISR);
 	activate_waiting_tasks();
+	dispatcher(kFromISR);
+//	activate_waiting_tasks();
 	reload_systick();
 }
+
 
 void PendSV_Handler(void)
 {

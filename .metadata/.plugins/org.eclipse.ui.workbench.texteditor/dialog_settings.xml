@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="next" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="next"/>
-			<item value="idle"/>
-			<item value="idel"/>
-			<item value="dispatcher"/>
-			<item value="inline"/>
-			<item value="DEFINE"/>
-			<item value="\n"/>
-			<item value="DbgConsole_Printf"/>
+			<item value="tick++"/>
+			<item value="globaltick"/>
+			<item value="sys"/>
+			<item value="systick"/>
+			<item value="vTaskStartScheduler"/>
+			<item value="todo"/>
+			<item value="activate"/>
+			<item value="activat"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -24,7 +24,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="390" key="DIALOG_HEIGHT"/>
-		<item value="638" key="DIALOG_X_ORIGIN"/>
-		<item value="274" key="DIALOG_Y_ORIGIN"/>
+		<item value="777" key="DIALOG_X_ORIGIN"/>
+		<item value="526" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

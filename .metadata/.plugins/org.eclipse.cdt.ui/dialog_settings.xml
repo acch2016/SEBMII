@@ -6,6 +6,8 @@
 		<item value="true" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="global"/>
+			<item value="tick"/>
 			<item value="GET"/>
 			<item value="PRINTF"/>
 			<item value="printf"/>

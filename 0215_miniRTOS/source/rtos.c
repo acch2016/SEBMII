@@ -23,7 +23,7 @@
 #define FORCE_INLINE 	__attribute__((always_inline)) inline
 
 #define STACK_FRAME_SIZE			8
-#define STACK_LR_OFFSET				2
+#define STACK_PC_OFFSET				2
 #define STACK_PSR_OFFSET			1
 #define STACK_PSR_DEFAULT			0x01000000
 
@@ -40,6 +40,9 @@ static void init_is_alive(void);
 static void refresh_is_alive(void);
 #endif
 
+
+#define TRUE 1;
+#define FALSE 0;
 /**********************************************************************************/
 // Type definitions
 /**********************************************************************************/
@@ -81,6 +84,8 @@ struct
 /**********************************************************************************/
 // Local methods prototypes
 /**********************************************************************************/
+uint8_t flag_first_context_switch = FALSE;
+
 
 static void reload_systick(void);
 static void dispatcher(task_switch_type_e type);
@@ -101,26 +106,39 @@ void rtos_start_scheduler(void)
 	task_list.current_task = RTOS_INVALID_TASK;
 #endif
 	SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk
-	        | SysTick_CTRL_ENABLE_Msk;
+			| SysTick_CTRL_ENABLE_Msk;
 	reload_systick();
 	for (;;)
 		;
 }
 
-rtos_task_handle_t rtos_create_task(void (*task_body)(), uint8_t priority,
-		rtos_autostart_e autostart)
+
+rtos_task_handle_t rtos_create_task(void (*task_body)(), uint8_t priority, rtos_autostart_e autostart)
 {
-
-
-
-
-
-	kStartSuspended == autostart ?  S_READY : S_SUSPENDED;
+	rtos_task_handle_t retval;
+	if (RTOS_MAX_NUMBER_OF_TASKS > task_list.nTasks)
+	{
+		task_list.tasks[task_list.nTasks].priority = priority;
+		task_list.tasks[task_list.nTasks].local_tick = 0;
+		task_list.tasks[task_list.nTasks].task_body = task_body;
+		task_list.tasks[task_list.nTasks].sp = &(task_list.tasks[task_list.nTasks].stack[RTOS_STACK_SIZE - 1 - STACK_FRAME_SIZE]);
+		task_list.tasks[task_list.nTasks].state = kStartSuspended == autostart ? S_SUSPENDED : S_READY;
+		task_list.tasks[task_list.nTasks].stack[RTOS_STACK_SIZE - STACK_PC_OFFSET] = (uint32_t)task_body;
+		task_list.tasks[task_list.nTasks].stack[RTOS_STACK_SIZE - STACK_PSR_OFFSET] = STACK_PSR_DEFAULT;
+		retval = task_list.nTasks;
+		task_list.nTasks++;
+	}
+	else
+	{
+		retval = RTOS_INVALID_TASK;
+	}
+	return retval;
 }
+
 
 rtos_tick_t rtos_get_clock(void)
 {
-	return 0;
+	return task_list.global_tick;
 }
 
 void rtos_delay(rtos_tick_t ticks)
@@ -128,17 +146,18 @@ void rtos_delay(rtos_tick_t ticks)
 	task_list.tasks[task_list.current_task].state = S_WAITING;
 	task_list.tasks[task_list.current_task].local_tick = ticks;
 	dispatcher(kFromNormalExec);
-
 }
 
 void rtos_suspend_task(void)
 {
-
+	task_list.tasks[task_list.current_task].state = S_SUSPENDED;
+	dispatcher(kFromNormalExec);
 }
 
-void rtos_activate_task(rtos_task_handle_t task)
+void rtos_activate_task(rtos_task_handle_t task)//Vacio??
 {
-
+	task_list.tasks[task_list.current_task].state = S_READY;
+	dispatcher(kFromNormalExec);
 }
 
 /**********************************************************************************/
@@ -147,24 +166,58 @@ void rtos_activate_task(rtos_task_handle_t task)
 
 static void reload_systick(void)
 {
-	SysTick->LOAD = USEC_TO_COUNT(RTOS_TIC_PERIOD_IN_US,
-	        CLOCK_GetCoreSysClkFreq());
+	SysTick->LOAD = USEC_TO_COUNT(RTOS_TIC_PERIOD_IN_US, CLOCK_GetCoreSysClkFreq());
 	SysTick->VAL = 0;
 }
 
 static void dispatcher(task_switch_type_e type)
 {
+	rtos_task_handle_t next_task = RTOS_INVALID_TASK;
+	uint8_t index;
+	int8_t highest = -1;
+	for(index = 0 ; index < task_list.nTasks ; index++)
+	{
+		if(highest < task_list.tasks[index].priority && (S_READY == task_list.tasks[index].state || S_RUNNING == task_list.tasks[index].state))
+		{
+			next_task = index;
+			highest = task_list.tasks[index].priority;
+
+		}
+	}
+	if(task_list.current_task != next_task)
+	{
+		task_list.next_task = next_task;
+		context_switch(type);
+	}
 
 }
 
 FORCE_INLINE static void context_switch(task_switch_type_e type)
 {
+	if(!flag_first_context_switch){
+	register uint32_t sp asm("sp");
+	task_list.tasks[task_list.current_task].sp = sp-9;
+	}
+	task_list.current_task = task_list.next_task;
+	task_list.tasks[task_list.current_task].state = S_RUNNING;
+	SCB->ICSR |= SCB_ICSR_PENDSVCLR_Msk;
+	flag_first_context_switch = TRUE;
 
 }
 
 static void activate_waiting_tasks()
 {
-
+	for(int index = 0;index<task_list.nTasks;index++)
+	{
+		if(task_list.tasks[index].state == S_WAITING)
+		{
+			task_list.tasks[index].local_tick--;
+			if(0 == task_list.tasks[index].local_tick)
+			{
+				task_list.tasks[index].state = S_READY;
+			}
+		}
+	}
 }
 
 /**********************************************************************************/
@@ -183,17 +236,23 @@ static void idle_task(void)
 // ISR implementation
 /**********************************************************************************/
 
-void SysTick_Handler(void)
+void SysTick_Handler(void) //Donde se incrementa????
 {
 #ifdef RTOS_ENABLE_IS_ALIVE
 	refresh_is_alive();
 #endif
+	task_list.global_tick++;
+	dispatcher(kFromISR);
 	activate_waiting_tasks();
 	reload_systick();
 }
 
 void PendSV_Handler(void)
 {
+	register uint32_t *r0 asm("r0");
+	SCB->ICSR |= SCB_ICSR_PENDSVCLR_Msk;
+	r0 = task_list.tasks[task_list.current_task].sp;
+	asm("mov r7, r0");
 
 }
 
@@ -209,13 +268,13 @@ static void init_is_alive(void)
 
 	port_pin_config_t port_config =
 	{ kPORT_PullDisable, kPORT_FastSlewRate, kPORT_PassiveFilterDisable,
-	        kPORT_OpenDrainDisable, kPORT_LowDriveStrength, kPORT_MuxAsGpio,
-	        kPORT_UnlockRegister, };
+			kPORT_OpenDrainDisable, kPORT_LowDriveStrength, kPORT_MuxAsGpio,
+			kPORT_UnlockRegister, };
 	CLOCK_EnableClock(alive_CLOCK(RTOS_IS_ALIVE_PORT));
 	PORT_SetPinConfig(alive_PORT(RTOS_IS_ALIVE_PORT), RTOS_IS_ALIVE_PIN,
-	        &port_config);
+			&port_config);
 	GPIO_PinInit(alive_GPIO(RTOS_IS_ALIVE_PORT), RTOS_IS_ALIVE_PIN,
-	        &gpio_config);
+			&gpio_config);
 }
 
 static void refresh_is_alive(void)
@@ -223,12 +282,12 @@ static void refresh_is_alive(void)
 	static uint8_t state = 0;
 	static uint32_t count = 0;
 	SysTick->LOAD = USEC_TO_COUNT(RTOS_TIC_PERIOD_IN_US,
-	        CLOCK_GetCoreSysClkFreq());
+			CLOCK_GetCoreSysClkFreq());
 	SysTick->VAL = 0;
 	if (RTOS_IS_ALIVE_PERIOD_IN_US / RTOS_TIC_PERIOD_IN_US - 1 == count)
 	{
 		GPIO_WritePinOutput(alive_GPIO(RTOS_IS_ALIVE_PORT), RTOS_IS_ALIVE_PIN,
-		        state);
+				state);
 		state = state == 0 ? 1 : 0;
 		count = 0;
 	} else

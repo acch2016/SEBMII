@@ -1,6 +1,6 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:0215_miniRTOS JLink Release,org.eclipse.launchbar.core.descriptorType.default\:0215_miniRTOS JLink Debug,org.eclipse.launchbar.core.descriptorType.default\:2TaskvTaskDelay_Debug_PNE,org.eclipse.launchbar.core.descriptorType.default\:2TaskvTaskDelay_Release_PNE,org.eclipse.launchbar.core.descriptorType.default\:0221_FreeRTOS JLink Release,org.eclipse.launchbar.core.descriptorType.default\:0221_FreeRTOS JLink Debug
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:0125_LED\ JLink\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:0125_LED\ JLink\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

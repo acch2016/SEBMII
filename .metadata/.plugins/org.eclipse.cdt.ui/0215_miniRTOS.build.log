@@ -1,6 +1,6 @@
-15:13:22 **** Incremental Build of configuration Debug for project 0215_miniRTOS ****
+23:13:02 **** Incremental Build of configuration Debug for project 0215_miniRTOS ****
 make -r -j4 all 
 make: Nothing to be done for `all'.
 
-15:13:22 Build Finished (took 218ms)
+23:13:03 Build Finished (took 187ms)
 

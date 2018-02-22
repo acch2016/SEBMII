@@ -50,19 +50,19 @@
 
 /* TODO: insert other definitions and declarations here. */
 
-/* TODO: ¿Como se utiliza lo siguiente? */
 /* Task priorities. */
-#define dummy_task1_PRIORITY (configMAX_PRIORITIES - 1)
-#define dummy_task2_PRIORITY (configMAX_PRIORITIES - 2)
-#define dummy_task3_PRIORITY (configMAX_PRIORITIES - 1)
+#define dummy_task1_PRIORITY (configMAX_PRIORITIES - 2)
+#define dummy_task2_PRIORITY (configMAX_PRIORITIES - 1)
+#define dummy_task3_PRIORITY (configMAX_PRIORITIES - 2)
 
 const int8_t * pTextFor_dummy_task1 = "IN TASK 1: %i +++++++++++++++\r\n";
 const int8_t * pTextFor_dummy_task2 = "IN TASK 2: %i ***************\r\n";
 const int8_t * pTextFor_dummy_task3 = "IN TASK 3: %i ---------------\r\n";
 
-//uint8_t * pCounterFor_dummy_task1 = 0;
-//uint8_t * pCounterFor_dummy_task2 = 0;
-//uint8_t * pCounterFor_dummy_task3 = 0;
+TaskHandle_t taskHandle_dummy_task1;
+TaskHandle_t taskHandle_dummy_task2;
+TaskHandle_t taskHandle_dummy_task3;
+
 /*
  * @brief   Application entry point.
  */
@@ -73,17 +73,17 @@ void dummy_task1(void *pvParameters) {
 	pTaskName = (int8_t*) pvParameters;
 
 	TickType_t xLastWakeTime;
-//	const TickType_t xFrequency = 2000;
+	const TickType_t xPeriod = pdMS_TO_TICKS(2000);
+	// Initialize the xLastWakeTime variable with the current time.
+	xLastWakeTime = xTaskGetTickCount();
 
 	uint8_t counter = 0;
 	for (;;) {
-		// Initialise the xLastWakeTime variable with the current time.
-		xLastWakeTime = xTaskGetTickCount();
+
 		PRINTF(pTaskName, counter);
 		counter++;
-//		vTaskDelayUntil( &xLastWakeTime, xFrequency );
-		xLastWakeTime = xTaskGetTickCount()- xLastWakeTime;
-		vTaskDelay(2000 - xLastWakeTime);
+		vTaskDelayUntil( &xLastWakeTime, xPeriod );
+
 	}
 }
 void dummy_task2(void *pvParameters) {
@@ -92,17 +92,17 @@ void dummy_task2(void *pvParameters) {
 	pTaskName = (int8_t*) pvParameters;
 
 	TickType_t xLastWakeTime;
-//	const TickType_t xFrequency = 4000;
+	const TickType_t xPeriod = pdMS_TO_TICKS(4000);
+	// Initialize the xLastWakeTime variable with the current time.
+	xLastWakeTime = xTaskGetTickCount();
 
 	uint8_t counter = 0;
 	for (;;) {
-		// Initialise the xLastWakeTime variable with the current time.
-		xLastWakeTime = xTaskGetTickCount();
+
 		PRINTF(pTaskName, counter);
 		counter++;
-//		vTaskDelayUntil( &xLastWakeTime, xFrequency );
-		xLastWakeTime = xTaskGetTickCount()- xLastWakeTime;
-		vTaskDelay(4000 - xLastWakeTime);;
+		vTaskDelayUntil( &xLastWakeTime, xPeriod );
+
 	}
 }
 void dummy_task3(void *pvParameters) {
@@ -111,17 +111,17 @@ void dummy_task3(void *pvParameters) {
 	pTaskName = (int8_t*) pvParameters;
 
 	TickType_t xLastWakeTime;
-//	const TickType_t xFrequency = 1000;
+	const TickType_t xPeriod = pdMS_TO_TICKS(1000);
+	// Initialize the xLastWakeTime variable with the current time.
+	xLastWakeTime = xTaskGetTickCount();
 
 	uint8_t counter = 0;
 	for (;;) {
-		// Initialise the xLastWakeTime variable with the current time.
-		xLastWakeTime = xTaskGetTickCount();
+
 		PRINTF(pTaskName, counter);
 		counter++;
-//		vTaskDelayUntil( &xLastWakeTime, xFrequency );
-		xLastWakeTime = xTaskGetTickCount()- xLastWakeTime;
-		vTaskDelay(1000 - xLastWakeTime);
+		vTaskDelayUntil( &xLastWakeTime, xPeriod );
+
 	}
 }
 
@@ -135,9 +135,11 @@ int main(void) {
   	/* Init FSL debug console. */
     BOARD_InitDebugConsole();
 
-    xTaskCreate(dummy_task1, "dummy_task1", configMINIMAL_STACK_SIZE, (void*)pTextFor_dummy_task1, 1, NULL);
-    xTaskCreate(dummy_task2, "dummy_task2", configMINIMAL_STACK_SIZE, (void*)pTextFor_dummy_task2, 2, NULL);
-    xTaskCreate(dummy_task3, "dummy_task3", configMINIMAL_STACK_SIZE, (void*)pTextFor_dummy_task3, 1, NULL);
+    xTaskCreate(dummy_task1, "dummy_task1", configMINIMAL_STACK_SIZE, (void*)pTextFor_dummy_task1, dummy_task1_PRIORITY, taskHandle_dummy_task1);
+    xTaskCreate(dummy_task2, "dummy_task2", configMINIMAL_STACK_SIZE, (void*)pTextFor_dummy_task2, dummy_task2_PRIORITY, taskHandle_dummy_task2);
+    xTaskCreate(dummy_task3, "dummy_task3", configMINIMAL_STACK_SIZE, (void*)pTextFor_dummy_task3, dummy_task3_PRIORITY, taskHandle_dummy_task3);
+//    Pudo ser asi:
+//    xTaskCreate(dummy_task1, "dummy_task1", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
     vTaskStartScheduler();
 
 

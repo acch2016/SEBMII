@@ -43,38 +43,23 @@
 
 #include "FreeRTOS.h"
 #include "task.h"
+#include "semphr.h"
+
 uint8_t semaphore = 0;
 
+SemaphoreHandle_t mutex_uart;
+const char msg1[] = "\rAnother useless message here!\n";
+const char msg2[] = "\rThis is a useless message!\n";
 
 void print1_task(void *arg)
 {
-	TickType_t xLastWakeTime;
-	const TickType_t xPeriod = pdMS_TO_TICKS(rand()%10);
-	xLastWakeTime = xTaskGetTickCount();
+	char *msg = (char*) arg;
 	for(;;)
 	{
-
-
-		xSemaphoreTake
-		PRINTF("\rThis is a useless message!\n");
-
-
+		xSemaphoreTake(mutex_uart,portMAX_DELAY);
+		PRINTF(msg);
+		xSemaphoreGive(mutex_uart);
 		vTaskDelay(rand()%10); //crea modulo random entre 0 y 10
-	}
-}
-
-void print2_task(void *arg)
-{
-	TickType_t xLastWakeTime;
-	const TickType_t xPeriod = pdMS_TO_TICKS(rand()%10);
-	xLastWakeTime = xTaskGetTickCount();
-	for(;;)
-	{
-		taskDISABLE_INTERRUPTS();
-		PRINTF("\rAnother useless message here!\n");
-		taskENABLE_INTERRUPTS();
-
-		vTaskDelay(rand()%10);
 	}
 }
 
@@ -86,10 +71,10 @@ int main(void)
     BOARD_InitDebugConsole();
     srand(0x15458523);//semilla
 
+    mutex_uart = xSemaphoreCreateMutex();
 
-
-    xTaskCreate(print1_task, "print1", 110, NULL, configMAX_PRIORITIES, NULL);
-    xTaskCreate(print2_task, "print2", 110, NULL, configMAX_PRIORITIES-1, NULL);
+    xTaskCreate(print_task, "print1", 110, msg1, configMAX_PRIORITIES, NULL);
+    xTaskCreate(print_task, "print2", 110, msg2, configMAX_PRIORITIES-1, NULL);
     vTaskStartScheduler();
     for(;;)
     {

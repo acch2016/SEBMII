@@ -1,10 +1,5 @@
-18:05:42 **** Incremental Build of configuration Debug for project 0307_Tarea7_binary-countingSemaphore ****
+19:06:18 **** Incremental Build of configuration Debug for project 0307_Tarea7_binary-countingSemaphore ****
 make -r -j4 all 
-Building file: ../source/0307_Tarea7_binary-countingSemaphore.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DPRINTF_FLOAT_ENABLE=0 -D__USE_CMSIS -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=1 -D__MCUXPRESSO -DDEBUG -DSDK_OS_FREE_RTOS -DFSL_RTOS_FREE_RTOS -DCPU_MK64FN1M0VLL12 -DCPU_MK64FN1M0VLL12_cm4 -I"C:\SEBM\SEBMII\0307_Tarea7_binary-countingSemaphore\board" -I"C:\SEBM\SEBMII\0307_Tarea7_binary-countingSemaphore\source" -I"C:\SEBM\SEBMII\0307_Tarea7_binary-countingSemaphore" -I"C:\SEBM\SEBMII\0307_Tarea7_binary-countingSemaphore\freertos\include" -I"C:\SEBM\SEBMII\0307_Tarea7_binary-countingSemaphore\freertos\portable" -I"C:\SEBM\SEBMII\0307_Tarea7_binary-countingSemaphore\drivers" -I"C:\SEBM\SEBMII\0307_Tarea7_binary-countingSemaphore\CMSIS" -I"C:\SEBM\SEBMII\0307_Tarea7_binary-countingSemaphore\utilities" -I"C:\SEBM\SEBMII\0307_Tarea7_binary-countingSemaphore\startup" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"source/0307_Tarea7_binary-countingSemaphore.d" -MT"source/0307_Tarea7_binary-countingSemaphore.o" -MT"source/0307_Tarea7_binary-countingSemaphore.d" -o "source/0307_Tarea7_binary-countingSemaphore.o" "../source/0307_Tarea7_binary-countingSemaphore.c"
-Finished building: ../source/0307_Tarea7_binary-countingSemaphore.c
- 
 Building target: 0307_Tarea7_binary-countingSemaphore.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -Xlinker -print-memory-usage -Xlinker --gc-sections -Xlinker -Map="0307_Tarea7_binary-countingSemaphore.map" -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T 0307_Tarea7_binary-countingSemaphore_Debug.ld -o "0307_Tarea7_binary-countingSemaphore.axf"  ./utilities/fsl_debug_console.o ./utilities/fsl_io.o ./utilities/fsl_log.o ./utilities/fsl_str.o  ./startup/startup_mk64f12.o  ./source/0307_Tarea7_binary-countingSemaphore.o ./source/semihost_hardfault.o  ./freertos/source/croutine.o ./freertos/source/event_groups.o ./freertos/source/list.o ./freertos/source/queue.o ./freertos/source/tasks.o ./freertos/source/timers.o  ./freertos/portable/fsl_tickless_systick.o ./freertos/portable/heap_4.o ./freertos/portable/port.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_flash.o ./drivers/fsl_gpio.o ./drivers/fsl_smc.o ./drivers/fsl_uart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./CMSIS/system_MK64F12.o   
@@ -21,9 +16,9 @@ arm-none-eabi-size "0307_Tarea7_binary-countingSemaphore.axf"; # arm-none-eabi-o
    text	   data	    bss	    dec	    hex	filename
   49148	     16	  19244	  68408	  10b38	0307_Tarea7_binary-countingSemaphore.axf
  
-18:05:57 **** Incremental Build of configuration Debug for project 0307_Tarea7_binary-countingSemaphore ****
+19:06:28 **** Incremental Build of configuration Debug for project 0307_Tarea7_binary-countingSemaphore ****
 make -r -j4 all 
 make: Nothing to be done for `all'.
-18:05:58 **** Incremental Build of configuration Debug for project 0307_Tarea7_binary-countingSemaphore ****
+19:06:29 **** Incremental Build of configuration Debug for project 0307_Tarea7_binary-countingSemaphore ****
 make -r -j4 all 
 make: Nothing to be done for `all'.

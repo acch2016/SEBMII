@@ -110,10 +110,6 @@ void hours_task(void *arg)
 
 void print_task()
 {
-	for(;;)
-		{
-
-		}
 
 }
 

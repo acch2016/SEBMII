@@ -56,9 +56,8 @@
 SemaphoreHandle_t seconds_semaphore;
 SemaphoreHandle_t minutes_semaphore;
 SemaphoreHandle_t hours_semaphore;
-QueueHandle_t xQueue;
-EventGroupHandle_t g_time_events;
 
+EventGroupHandle_t g_time_events;
 
 typedef struct
 {
@@ -66,7 +65,6 @@ typedef struct
 	uint8_t minute;
 	uint8_t hour;
 } alarm_t;
-alarm_t g_alarm;
 
 typedef enum{seconds_type, minutes_type, hours_type} time_types_t;
 typedef struct
@@ -83,8 +81,6 @@ typedef struct
 
 void seconds_task(void *arg)
 {
-	time_msg_t *message;
-	message = pvPortMalloc(sizeof(time_msg_t));
 	TickType_t xLastWakeTime;
 	const TickType_t xPeriod = pdMS_TO_TICKS(1000);
 	xLastWakeTime = xTaskGetTickCount();
@@ -99,13 +95,11 @@ void seconds_task(void *arg)
 			xSemaphoreGive(minutes_semaphore);
 		}
 
-		if ( seconds == g_alarm.second )
+		if ( seconds == alarm.second )
 		{
 			xEventGroupSetBits(g_time_events,EVENT_SECONDS);
 		}
-		message->time_type = seconds_type;
-		message->value = seconds;
-		xQueueSend( xQueue,&message,portMAX_DELAY);
+
 	}
 }
 
@@ -163,7 +157,6 @@ int main(void) {
     hours_semaphore = xSemaphoreCreateBinary();
 
     g_time_events = xEventGroupCreate();
-    xQueue = xQueueCreate(3,sizeof(struct g_alarm *));
 
     xTaskCreate(seconds_task, "seconds_task", configMINIMAL_STACK_SIZE, NULL, configMAX_PRIORITIES, NULL);
 	xTaskCreate(minutes_task, "minutes_task", configMINIMAL_STACK_SIZE, NULL, configMAX_PRIORITIES - 1, NULL);

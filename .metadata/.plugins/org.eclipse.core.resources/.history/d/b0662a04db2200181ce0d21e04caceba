@@ -49,42 +49,19 @@
 #include "event_groups.h"
 /* TODO: insert other definitions and declarations here. */
 #define STACK_PRINT 30
-#define EVENT_SECONDS (1<<0)
-#define EVENT_MINUTES (1<<1)
-#define EVENT_HOURS (1<<2)
-
+#define EVENT_60_SECONDS 0<<1
+#define EVENT_60_MINUTES 1<<1
 SemaphoreHandle_t seconds_semaphore;
 SemaphoreHandle_t minutes_semaphore;
 SemaphoreHandle_t hours_semaphore;
-QueueHandle_t xQueue;
-EventGroupHandle_t g_time_events;
-
-
-typedef struct
-{
-	uint8_t second;
-	uint8_t minute;
-	uint8_t hour;
-} alarm_t;
-alarm_t g_alarm;
 
 typedef enum{seconds_type, minutes_type, hours_type} time_types_t;
-typedef struct
-{
-	time_types_t time_type;
-	uint8_t value;
-} time_msg_t;
-
-
-
 /*
  * @brief   Application entry point.
  */
 
 void seconds_task(void *arg)
 {
-	time_msg_t *message;
-	message = pvPortMalloc(sizeof(time_msg_t));
 	TickType_t xLastWakeTime;
 	const TickType_t xPeriod = pdMS_TO_TICKS(1000);
 	xLastWakeTime = xTaskGetTickCount();
@@ -96,16 +73,10 @@ void seconds_task(void *arg)
 		seconds++;
 		if (60 == seconds) {
 			seconds = 0;
-			xSemaphoreGive(minutes_semaphore);
+			xSemaphoreGive(seconds_semaphore);
+//			xSemaphoreGive(minutes_semaphore);
 		}
 
-		if ( seconds == g_alarm.second )
-		{
-			xEventGroupSetBits(g_time_events,EVENT_SECONDS);
-		}
-		message->time_type = seconds_type;
-		message->value = seconds;
-		xQueueSend( xQueue,&message,portMAX_DELAY);
 	}
 }
 
@@ -115,12 +86,11 @@ void minutes_task(void *arg)
 	uint8_t minutes = 0;
 	for(;;)
 	{
-		xSemaphoreTake(minutes_semaphore,portMAX_DELAY);
+		xSemaphoreTake(seconds_semaphore,portMAX_DELAY);
 		minutes ++;
 		if (60 == minutes)
 		{
 			minutes=0;
-			xSemaphoreGive(hours_semaphore);
 
 		}
 
@@ -163,7 +133,6 @@ int main(void) {
     hours_semaphore = xSemaphoreCreateBinary();
 
     g_time_events = xEventGroupCreate();
-    xQueue = xQueueCreate(3,sizeof(struct g_alarm *));
 
     xTaskCreate(seconds_task, "seconds_task", configMINIMAL_STACK_SIZE, NULL, configMAX_PRIORITIES, NULL);
 	xTaskCreate(minutes_task, "minutes_task", configMINIMAL_STACK_SIZE, NULL, configMAX_PRIORITIES - 1, NULL);

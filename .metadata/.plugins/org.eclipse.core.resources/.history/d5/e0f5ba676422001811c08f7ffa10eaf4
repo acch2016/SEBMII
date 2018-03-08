@@ -53,6 +53,7 @@ void PORTA_IRQHandler()
  {
  	BaseType_t xHigherPriorityTaskWoken;
  	PORT_ClearPinsInterruptFlags(PORTA, 1<<4);
+ 	BOARD_SW3_GPIO_PIN
  	xHigherPriorityTaskWoken = pdFALSE;
  	xSemaphoreGiveFromISR( b_led_semaphore, &xHigherPriorityTaskWoken );
  	portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
@@ -72,18 +73,21 @@ void blue_task(void *arg)
 	for (;;)
 	{
 		xSemaphoreTake(b_led_semaphore, portMAX_DELAY);
+		GPIO_WritePinOutput(GPIOE, 26, 1);
 		GPIO_TogglePinsOutput(GPIOB, 1 << 21);
 	}
 }
 
 void green_task(void *arg)
 {
+//	xSemaphoreGive(g_led_semaphore);
 	for (;;)
 	{
 		if ( 10 == uxSemaphoreGetCount(g_led_semaphore))
 		{
 			xSemaphoreTake(g_led_semaphore, portMAX_DELAY);
 			g_led_semaphore = xSemaphoreCreateCounting( 10, 0 );
+			GPIO_WritePinOutput(GPIOB, 21, 1);
 			GPIO_TogglePinsOutput(GPIOE, 1 << 26);
 		}
 	}

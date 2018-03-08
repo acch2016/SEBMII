@@ -1,6 +1,6 @@
-13:05:02 **** Incremental Build of configuration Debug for project 0307_Tarea7_binary-countingSemaphore ****
+18:05:58 **** Incremental Build of configuration Debug for project 0307_Tarea7_binary-countingSemaphore ****
 make -r -j4 all 
 make: Nothing to be done for `all'.
 
-13:05:02 Build Finished (took 296ms)
+18:05:58 Build Finished (took 219ms)
 

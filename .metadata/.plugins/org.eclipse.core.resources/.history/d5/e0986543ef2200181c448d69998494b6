@@ -166,12 +166,8 @@ void alarm_task()
 	EventBits_t uxBits;
 	for(;;)
 	{
-		uxBits = xEventGroupWaitBits(g_time_events, EVENT_MINUTES | EVENT_HOURS | EVENT_SECONDS, pdTRUE, pdTRUE, portMAX_DELAY);
-
-		if (uxBits &  (EVENT_MINUTES | EVENT_HOURS | EVENT_SECONDS) )
-		{
-			PRINTF("ALARM");
-		}
+		xEventGroupWaitBits(g_time_events, EVENT_MINUTES && EVENT_HOURS && EVENT_SECONDS, pdTRUE, pdTRUE, portMAX_DELAY);
+		PRINTF("ALARM");
 	}
 
 }

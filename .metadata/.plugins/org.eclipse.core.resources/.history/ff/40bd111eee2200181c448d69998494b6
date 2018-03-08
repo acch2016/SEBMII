@@ -137,8 +137,7 @@ void minutes_task(void *arg)
 
 void hours_task(void *arg)
 {
-	time_msg_t *message;
-	message = pvPortMalloc(sizeof(time_msg_t));
+
 	uint8_t hours = 0;
 	for(;;)
 	{
@@ -150,7 +149,7 @@ void hours_task(void *arg)
 
 		}
 
-		if ( hours == g_alarm.hour )
+		if ( minutes == g_alarm.hour )
 		{
 			xEventGroupSetBits(g_time_events,EVENT_HOURS);
 		}
@@ -166,12 +165,8 @@ void alarm_task()
 	EventBits_t uxBits;
 	for(;;)
 	{
-		uxBits = xEventGroupWaitBits(g_time_events, EVENT_MINUTES | EVENT_HOURS | EVENT_SECONDS, pdTRUE, pdTRUE, portMAX_DELAY);
-
-		if (uxBits &  (EVENT_MINUTES | EVENT_HOURS | EVENT_SECONDS) )
-		{
-			PRINTF("ALARM");
-		}
+		xEventGroupWaitBits(g_time_events, EVENT_MINUTES && EVENT_HOURS && EVENT_SECONDS, pdTRUE, pdTRUE, portMAX_DELAY);
+		PRINTF("ALARM");
 	}
 
 }

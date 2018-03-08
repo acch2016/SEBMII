@@ -168,7 +168,7 @@ void alarm_task()
 	{
 		uxBits = xEventGroupWaitBits(g_time_events, EVENT_MINUTES | EVENT_HOURS | EVENT_SECONDS, pdTRUE, pdTRUE, portMAX_DELAY);
 
-		if (uxBits &  (EVENT_MINUTES | EVENT_HOURS | EVENT_SECONDS) )
+		if (uxBits ==  )
 		{
 			PRINTF("ALARM");
 		}

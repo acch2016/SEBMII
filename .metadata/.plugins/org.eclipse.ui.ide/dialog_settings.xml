@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
-		<item value="com.crt.lpcxpresso.feature.product:10.1.0.201711141210"/>
-		<item value="com.crt.lpcxpresso.feature:10.1.0.201711141210"/>
+		<item value="com.crt.lpcxpresso.feature.product:10.1.0.201712141742"/>
+		<item value="com.crt.lpcxpresso.feature:10.1.0.201712141742"/>
 		<item value="com.nxp.swtools.clocks.feature:4.0.0.201711131454"/>
 		<item value="com.nxp.swtools.framework.feature:4.0.0.201711131454"/>
 		<item value="com.nxp.swtools.periphs.feature:1.0.0.201711131454"/>

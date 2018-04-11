@@ -1,0 +1,6 @@
+17:11:06 **** Incremental Build of configuration Debug for project 180411_ethernet_lwip_tcpecho_freertosdemo_apps_lwip_lwip_tcpecho_freertos ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+
+17:11:07 Build Finished (took 328ms)
+

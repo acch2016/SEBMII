@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_XNbCcC3hEeium6MT7Ar5Ow" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_XNbCcS3hEeium6MT7Ar5Ow" bindingContexts="_XNkOUS3hEeium6MT7Ar5Ow">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0221_FreeRTOS.c&quot; tooltip=&quot;0221_FreeRTOS/source/0221_FreeRTOS.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0221_FreeRTOS/source/0221_FreeRTOS.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0201_IMU_.c&quot; tooltip=&quot;0201_IMU_/source/0201_IMU_.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0201_IMU_/source/0201_IMU_.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;FreeRTOSConfig.h&quot; tooltip=&quot;0322_examen1/source/FreeRTOSConfig.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0322_examen1/source/FreeRTOSConfig.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0305_Queue.c&quot; tooltip=&quot;0305_Queue/source/0305_Queue.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/source/0305_Queue.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0322_examen1.c&quot; tooltip=&quot;0322_examen1/source/0322_examen1.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0322_examen1/source/0322_examen1.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;tasks.c&quot; tooltip=&quot;0305_Queue/freertos/source/tasks.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/freertos/source/tasks.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0222_Task.c&quot; tooltip=&quot;0222_Task/source/0222_Task.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0222_Task/source/0222_Task.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;fsl_uart.c&quot; tooltip=&quot;0305_Queue/drivers/fsl_uart.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/drivers/fsl_uart.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;heap_4.c&quot; tooltip=&quot;0305_Queue/freertos/portable/heap_4.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/freertos/portable/heap_4.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;port.c&quot; tooltip=&quot;0305_Queue/freertos/portable/port.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/freertos/portable/port.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0301_Mutex_exemple_avantPapillon.c&quot; tooltip=&quot;0301_Mutex_exemple_avantPapillon/source/0301_Mutex_exemple_avantPapillon.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0301_Mutex_exemple_avantPapillon/source/0301_Mutex_exemple_avantPapillon.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;fsl_str.c&quot; tooltip=&quot;0305_Queue/utilities/fsl_str.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/utilities/fsl_str.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;portmacro.h&quot; tooltip=&quot;0305_Queue/freertos/portable/portmacro.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/freertos/portable/portmacro.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;startup_mk64f12.c&quot; tooltip=&quot;0305_Queue/startup/startup_mk64f12.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/startup/startup_mk64f12.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;lwip_tcpecho_freertos.c&quot; tooltip=&quot;180411_ethernet_lwip_tcpecho_freertosdemo_apps_lwip_lwip_tcpecho_freertos/source/lwip_tcpecho_freertos.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/180411_ethernet_lwip_tcpecho_freertosdemo_apps_lwip_lwip_tcpecho_freertos/source/lwip_tcpecho_freertos.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;tasks.c&quot; tooltip=&quot;180411_ethernet_lwip_tcpecho_freertosdemo_apps_lwip_lwip_tcpecho_freertos/freertos/source/tasks.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/180411_ethernet_lwip_tcpecho_freertosdemo_apps_lwip_lwip_tcpecho_freertos/freertos/source/tasks.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;etharp.c&quot; tooltip=&quot;180411_ethernet_lwip_tcpecho_freertosdemo_apps_lwip_lwip_tcpecho_freertos/lwip/src/core/ipv4/etharp.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/180411_ethernet_lwip_tcpecho_freertosdemo_apps_lwip_lwip_tcpecho_freertos/lwip/src/core/ipv4/etharp.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0221_FreeRTOS.c&quot; tooltip=&quot;0221_FreeRTOS/source/0221_FreeRTOS.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0221_FreeRTOS/source/0221_FreeRTOS.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0201_IMU_.c&quot; tooltip=&quot;0201_IMU_/source/0201_IMU_.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0201_IMU_/source/0201_IMU_.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;FreeRTOSConfig.h&quot; tooltip=&quot;0322_examen1/source/FreeRTOSConfig.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0322_examen1/source/FreeRTOSConfig.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0305_Queue.c&quot; tooltip=&quot;0305_Queue/source/0305_Queue.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/source/0305_Queue.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0322_examen1.c&quot; tooltip=&quot;0322_examen1/source/0322_examen1.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0322_examen1/source/0322_examen1.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;tasks.c&quot; tooltip=&quot;0305_Queue/freertos/source/tasks.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/freertos/source/tasks.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0222_Task.c&quot; tooltip=&quot;0222_Task/source/0222_Task.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0222_Task/source/0222_Task.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;fsl_uart.c&quot; tooltip=&quot;0305_Queue/drivers/fsl_uart.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/drivers/fsl_uart.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;heap_4.c&quot; tooltip=&quot;0305_Queue/freertos/portable/heap_4.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/freertos/portable/heap_4.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;port.c&quot; tooltip=&quot;0305_Queue/freertos/portable/port.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0305_Queue/freertos/portable/port.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0301_Mutex_exemple_avantPapillon.c&quot; tooltip=&quot;0301_Mutex_exemple_avantPapillon/source/0301_Mutex_exemple_avantPapillon.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/0301_Mutex_exemple_avantPapillon/source/0301_Mutex_exemple_avantPapillon.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_XNbCcS3hEeium6MT7Ar5Ow" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_XNbCci3hEeium6MT7Ar5Ow" x="425" y="0" width="1255" height="1010">
@@ -42,9 +42,10 @@
           <tags>persp.viewSC:org.eclipse.ui.navigator.ProjectExplorer</tags>
           <tags>persp.actionSet:com.crt.branding.toolbar.utilityactions</tags>
           <tags>persp.actionSet:eclox.ui.buildActionSet</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_XNbCdS3hEeium6MT7Ar5Ow" selectedElement="_XNbChC3hEeium6MT7Ar5Ow" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_XNbCdS3hEeium6MT7Ar5Ow" selectedElement="_XNbCdi3hEeium6MT7Ar5Ow" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_XNbCdi3hEeium6MT7Ar5Ow" containerData="2533" selectedElement="_XNbCdy3hEeium6MT7Ar5Ow">
               <children xsi:type="basic:PartStack" xmi:id="_XNbCdy3hEeium6MT7Ar5Ow" elementId="topLeft" containerData="6206" selectedElement="_XNbCeC3hEeium6MT7Ar5Ow">
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_XNbCeC3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_XNbEWC3hEeium6MT7Ar5Ow"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_XNbCeS3hEeium6MT7Ar5Ow" elementId="org.eclipse.cdt.ui.CView" toBeRendered="false" ref="_XNbEdy3hEeium6MT7Ar5Ow"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_XNbCei3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.views.BookmarkView" toBeRendered="false" ref="_XNbEeC3hEeium6MT7Ar5Ow"/>
@@ -236,76 +237,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_XNbESi3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.editorss" selectedElement="_XNbESy3hEeium6MT7Ar5Ow">
-      <children xsi:type="basic:PartStack" xmi:id="_XNbESy3hEeium6MT7Ar5Ow" elementId="PartStack@5a08b1" selectedElement="_XNbETC3hEeium6MT7Ar5Ow">
-        <tags>active</tags>
-        <children xsi:type="basic:Part" xmi:id="_XNbETC3hEeium6MT7Ar5Ow" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="0322_examen1.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0322_examen1.c&quot; partName=&quot;0322_examen1.c&quot; title=&quot;0322_examen1.c&quot; tooltip=&quot;0322_examen1/source/0322_examen1.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/0322_examen1/source/0322_examen1.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2342&quot; selectionTopPixel=&quot;270&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-          <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_XNbETS3hEeium6MT7Ar5Ow" elementId="#CEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_XNbETi3hEeium6MT7Ar5Ow" elementId="#CEditorRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorRulerContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_XNbETy3hEeium6MT7Ar5Ow" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_XNbEUC3hEeium6MT7Ar5Ow" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="0305_Queue.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0305_Queue.c&quot; partName=&quot;0305_Queue.c&quot; title=&quot;0305_Queue.c&quot; tooltip=&quot;0305_Queue/source/0305_Queue.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/0305_Queue/source/0305_Queue.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;12&quot; selectionOffset=&quot;6058&quot; selectionTopPixel=&quot;524&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_XNbEUS3hEeium6MT7Ar5Ow" elementId="#CEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_XNbEUi3hEeium6MT7Ar5Ow" elementId="#CEditorRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorRulerContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_XNbEUy3hEeium6MT7Ar5Ow" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_XNbEVC3hEeium6MT7Ar5Ow" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="0221_FreeRTOS.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;0221_FreeRTOS.c&quot; partName=&quot;0221_FreeRTOS.c&quot; title=&quot;0221_FreeRTOS.c&quot; tooltip=&quot;0221_FreeRTOS/source/0221_FreeRTOS.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/0221_FreeRTOS/source/0221_FreeRTOS.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2562&quot; selectionTopPixel=&quot;728&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_XNbEVS3hEeium6MT7Ar5Ow" elementId="#CEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_XNbEVi3hEeium6MT7Ar5Ow" elementId="#CEditorRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#CEditorRulerContext</tags>
-            <tags>popup:org.eclipse.cdt.ui.editor.CEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_XNbEVy3hEeium6MT7Ar5Ow" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-      </children>
+      <children xsi:type="basic:PartStack" xmi:id="_XNbESy3hEeium6MT7Ar5Ow" elementId="PartStack@5a08b1"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_XNbEWC3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.navigator.resources.ProjectExplorer"/>
@@ -313,6 +245,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;1&quot; org.eclipse.cdt.ui.cview.groupincludes=&quot;false&quot; org.eclipse.cdt.ui.cview.groupmacros=&quot;false&quot; org.eclipse.cdt.ui.editor.CUChildren=&quot;true&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_XNbEWS3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -506,7 +440,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_XNbEty3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.ProblemsView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;132&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;414&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;132&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;414&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_XNbEuC3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.views.ProblemView">
@@ -735,49 +669,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_XNbE9i3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbE9y3hEeium6MT7Ar5Ow" elementId="new.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbE-C3hEeium6MT7Ar5Ow" elementId="newWizardDropDown">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbE-S3hEeium6MT7Ar5Ow" elementId="new.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbE-i3hEeium6MT7Ar5Ow" elementId="save.group" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbE-y3hEeium6MT7Ar5Ow" elementId="save">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbE_C3hEeium6MT7Ar5Ow" elementId="saveAll">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbE_S3hEeium6MT7Ar5Ow" elementId="save.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_XNbE_i3hEeium6MT7Ar5Ow" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_XNkXzi3hEeium6MT7Ar5Ow"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbE_y3hEeium6MT7Ar5Ow" elementId="print.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbFAC3hEeium6MT7Ar5Ow" elementId="build.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbFAS3hEeium6MT7Ar5Ow" elementId="build.ext" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbFAi3hEeium6MT7Ar5Ow" elementId="additions">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbFAy3hEeium6MT7Ar5Ow" elementId="org.eclipse.cdt.ui.buildConfigToolbarAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbFBC3hEeium6MT7Ar5Ow" elementId="org.eclipse.cdt.ui.buildActiveConfigToolbarAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNbFBS3hEeium6MT7Ar5Ow" elementId="build">
-          <tags>Opaque</tags>
-        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_HTIOcT2DEeiDgZMNUbJN2A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_XNkXzi3hEeium6MT7Ar5Ow"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_XNbFBi3hEeium6MT7Ar5Ow" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -785,60 +677,12 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_XNkMkS3hEeium6MT7Ar5Ow" elementId="org.eclipse.debug.ui.launchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMki3hEeium6MT7Ar5Ow" elementId="debug">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMky3hEeium6MT7Ar5Ow" elementId="com.crt.quickstart.actions.DebugAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMlC3hEeium6MT7Ar5Ow" elementId="org.eclipse.debug.internal.ui.actions.DebugDropDownAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMlS3hEeium6MT7Ar5Ow" elementId="org.eclipse.debug.internal.ui.actions.RunDropDownAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMli3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMly3hEeium6MT7Ar5Ow" elementId="additions">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMmC3hEeium6MT7Ar5Ow" elementId="com.crt.ctrlcenter.toolbar.FlashAction">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_XNkMmS3hEeium6MT7Ar5Ow" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMmi3hEeium6MT7Ar5Ow" elementId="Search">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMmy3hEeium6MT7Ar5Ow" elementId="org.eclipse.cdt.ui.actions.OpenType">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMnC3hEeium6MT7Ar5Ow" elementId="org.eclipse.search.OpenSearchDialogPage">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_XNkMnS3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMni3hEeium6MT7Ar5Ow" elementId="Presentation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMny3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.toggleWordWrap">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMoC3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMoS3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMoi3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMoy3hEeium6MT7Ar5Ow" elementId="org.eclipse.cdt.ui.edit.text.c.toggleMarkOccurrences">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_XNkMpC3hEeium6MT7Ar5Ow" elementId="group.nav" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -846,34 +690,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_XNkMpi3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMpy3hEeium6MT7Ar5Ow" elementId="history.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMqC3hEeium6MT7Ar5Ow" elementId="group.application" visible="false">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMqS3hEeium6MT7Ar5Ow" elementId="backardHistory">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMqi3hEeium6MT7Ar5Ow" elementId="forwardHistory">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMqy3hEeium6MT7Ar5Ow" elementId="pin.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_XNkMrC3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_XNkXeC3hEeium6MT7Ar5Ow"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMrS3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMri3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMry3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
-          <tags>Opaque</tags>
-        </children>
-      </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_XNkMsC3hEeium6MT7Ar5Ow" elementId="org.eclipse.cdt.ui.editor.CEditor" visible="false">
-        <tags>Draggable</tags>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_HTIOfD2DEeiDgZMNUbJN2A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_XNkXeC3hEeium6MT7Ar5Ow"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_XNkMsS3hEeium6MT7Ar5Ow" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -885,12 +702,6 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_XNkMtS3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.workbench.help" visible="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMti3hEeium6MT7Ar5Ow" elementId="group.help">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_XNkMty3hEeium6MT7Ar5Ow" elementId="group.application" visible="false">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_XNkMuC3hEeium6MT7Ar5Ow" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
         <tags>stretch</tags>
@@ -2079,6 +1890,23 @@
     <tags>View</tags>
     <tags>categoryTag:FreeRTOS</tags>
   </descriptors>
+  <trimContributions xmi:id="_2r10UF9tEeO-yojH_y4TJA" elementId="org.eclipse.ui.ide.application.trimcontribution.QuickAccess" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" toBeRendered="false" parentId="org.eclipse.ui.main.toolbar" positionInParent="last">
+    <children xsi:type="menu:ToolControl" xmi:id="_76uUAF9tEeO-yojH_y4TJA" elementId="Spacer Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+      <tags>glue</tags>
+      <tags>move_after:PerspectiveSpacer</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+    <children xsi:type="menu:ToolControl" xmi:id="_8tJPcF9tEeO-yojH_y4TJA" elementId="SearchField" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.quickaccess.SearchField">
+      <tags>move_after:Spacer Glue</tags>
+      <tags>HIDEABLE</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+    <children xsi:type="menu:ToolControl" xmi:id="_9LgmcF9tEeO-yojH_y4TJA" elementId="Search-PS Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+      <tags>glue</tags>
+      <tags>move_after:SearchField</tags>
+      <tags>SHOW_RESTORE_MENU</tags>
+    </children>
+  </trimContributions>
   <commands xmi:id="_XNkUri3hEeium6MT7Ar5Ow" elementId="org.eclipse.jdt.ui.correction.inlineLocal.assist" commandName="Quick Assist - Inline local variable" description="Invokes quick assist and selects 'Inline local variable'" category="_XNkZPi3hEeium6MT7Ar5Ow"/>
   <commands xmi:id="_XNkUry3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.select.pageUp" commandName="Select Page Up" description="Select to the top of the page" category="_XNkZJC3hEeium6MT7Ar5Ow"/>
   <commands xmi:id="_XNkUsC3hEeium6MT7Ar5Ow" elementId="org.eclipse.ui.edit.text.toggleWordWrap" commandName="Toggle Word Wrap" description="Toggle word wrap in the current text editor" category="_XNkZIC3hEeium6MT7Ar5Ow"/>
